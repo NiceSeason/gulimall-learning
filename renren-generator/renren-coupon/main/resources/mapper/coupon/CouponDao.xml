@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.coupon.dao.CouponDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.coupon.entity.CouponEntity" id="couponMap">
+        <result property="id" column="id"/>
+        <result property="couponType" column="coupon_type"/>
+        <result property="couponImg" column="coupon_img"/>
+        <result property="couponName" column="coupon_name"/>
+        <result property="num" column="num"/>
+        <result property="amount" column="amount"/>
+        <result property="perLimit" column="per_limit"/>
+        <result property="minPoint" column="min_point"/>
+        <result property="startTime" column="start_time"/>
+        <result property="endTime" column="end_time"/>
+        <result property="useType" column="use_type"/>
+        <result property="note" column="note"/>
+        <result property="publishCount" column="publish_count"/>
+        <result property="useCount" column="use_count"/>
+        <result property="receiveCount" column="receive_count"/>
+        <result property="enableStartTime" column="enable_start_time"/>
+        <result property="enableEndTime" column="enable_end_time"/>
+        <result property="code" column="code"/>
+        <result property="memberLevel" column="member_level"/>
+        <result property="publish" column="publish"/>
+    </resultMap>
+
+
+</mapper>

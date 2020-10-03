@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.product.dao.SkuImagesDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.product.entity.SkuImagesEntity" id="skuImagesMap">
+        <result property="id" column="id"/>
+        <result property="skuId" column="sku_id"/>
+        <result property="imgUrl" column="img_url"/>
+        <result property="imgSort" column="img_sort"/>
+        <result property="defaultImg" column="default_img"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.product.dao.BrandDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.product.entity.BrandEntity" id="brandMap">
+        <result property="brandId" column="brand_id"/>
+        <result property="name" column="name"/>
+        <result property="logo" column="logo"/>
+        <result property="descript" column="descript"/>
+        <result property="showStatus" column="show_status"/>
+        <result property="firstLetter" column="first_letter"/>
+        <result property="sort" column="sort"/>
+    </resultMap>
+
+
+</mapper>

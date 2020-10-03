@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: gulimall-auth-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.110.152.217
+  redis:
+    host: 192.168.56.102
+  session:
+    store-type: redis
+
+server:
+  port: 20000
+  servlet:
+    session:
+      timeout: 30m

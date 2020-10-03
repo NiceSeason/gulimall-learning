@@ -1,0 +1,23 @@
+server:
+  port: 18001
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.110.152.217
+  application:
+    name: gulimall-cart
+  thymeleaf:
+    cache: false
+  redis:
+    host: 192.168.56.102
+    session:
+      store-type: redis
+
+# 自定义线程池参数
+gulimall:
+  thread:
+    corePoolSize: 10
+    maxPoolSize: 20
+    keepAliveTime: 300

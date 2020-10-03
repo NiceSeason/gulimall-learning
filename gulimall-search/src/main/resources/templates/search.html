@@ -1,0 +1,2129 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/search/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/static/search/font/iconfont.css">
+    <!--<script src="/static/search/./js/jquery-3.2.1.min.js"></script>-->
+    <script src="/static/search/js/jquery-1.12.4.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<!--头部-->
+<div class="header_head">
+    <div class="header_head_box">
+        <b class="header_head_p">
+            <div style="overflow: hidden">
+                <a href="http://gulimall.com/" class="header_head_p_a1" style="width:73px;">
+                    谷粒商城首页
+                </a>
+                <a href="#" class="header_head_p_a">
+                    <!--<img src="/static/search/img/img_05.png" style="border-radius: 50%;"/>-->
+                    北京</a>
+            </div>
+            <div class="header_head_p_cs">
+                <a href="#" style="background: #C81623;color: #fff;">北京</a>
+                <a href="#">上海</a>
+                <a href="#">天津</a>
+                <a href="#">重庆</a>
+                <a href="#">河北</a>
+                <a href="#">山西</a>
+                <a href="#">河南</a>
+                <a href="#">辽宁</a>
+                <a href="#">吉林</a>
+                <a href="#">黑龙江</a>
+                <a href="#">内蒙古</a>
+                <a href="#">江苏</a>
+                <a href="#">山东</a>
+                <a href="#">安徽</a>
+                <a href="#">浙江</a>
+                <a href="#">福建</a>
+                <a href="#">湖北</a>
+                <a href="#">湖南</a>
+                <a href="#">广东</a>
+                <a href="#">广西</a>
+                <a href="#">江西</a>
+                <a href="#">四川</a>
+                <a href="#">海南</a>
+                <a href="#">贵州</a>
+                <a href="#">云南</a>
+                <a href="#">西藏</a>
+                <a href="#">陕西</a>
+                <a href="#">甘肃</a>
+                <a href="#">青海</a>
+                <a href="#">宁夏</a>
+                <a href="#">新疆</a>
+                <a href="#">港澳</a>
+                <a href="#">台湾</a>
+                <a href="#">钓鱼岛</a>
+                <a href="#">海外</a>
+            </div>
+        </b>
+        <ul>
+            <li>
+                <a href="http://auth.gulimall.com/login.html" class="li_2">你好，[[${session.loginUser==null?"请登录":session.loginUser.nickname}]]</a>
+            </li>
+            <li>
+                <a href="http://auth.gulimall.com/reg.html">免费注册</a>
+            </li>
+            <span>|</span>
+            <li>
+                <a href="#">我的订单</a>
+            </li>
+            <span>|</span>
+            <li class="header_wdjd" style="width:80px;">
+                <a href="#">我的谷粒商城</a>
+                <img src="/static/search/image/down-@1x.png" />
+                <!--<b class="glyphicon glyphicon-menu-down"></b>-->
+                <div class="header_wdjd_txt">
+                    <ul>
+                        <li>
+                            <a href="#">待处理订单</a>
+                        </li>
+                        <li>
+                            <a href="#">消息</a>
+                        </li>
+                        <li>
+                            <a href="#">返修退换货</a>
+                        </li>
+                        <li>
+                            <a href="#">我的回答</a>
+                        </li>
+                        <li>
+                            <a href="#">降价商品</a>
+                        </li>
+                        <li>
+                            <a href="#">我的关注</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">我的京豆</a>
+                        </li>
+                        <li>
+                            <a href="#">我的优惠券</a>
+                        </li>
+                        <li>
+                            <a href="#">我的白条</a>
+                        </li>
+                        <li>
+                            <a href="#">我的理财</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <span>|</span>
+            <li>
+                <a href="#">谷粒商城会员</a>
+            </li>
+            <span>|</span>
+            <li>
+                <a href="#">企业采购</a>
+            </li>
+            <span>|</span>
+            <li class="header_wdjd1">
+                <a href="#">客户服务</a>
+                <img src="/static/search/image/down-@1x.png" />
+                <!--<b class="glyphicon glyphicon-menu-down"></b>-->
+                <div class="header_wdjd_txt">
+                    <ul>
+                        <p style="width:100%;">客户</p>
+                        <li>
+                            <a href="#">帮助中心</a>
+                        </li>
+                        <li>
+                            <a href="#">售后服务</a>
+                        </li>
+                        <li>
+                            <a href="#">在线客服</a>
+                        </li>
+                        <li>
+                            <a href="#">意见建议</a>
+                        </li>
+                        <li>
+                            <a href="#">电话客服</a>
+                        </li>
+                        <li>
+                            <a href="#">客服邮箱</a>
+                        </li>
+                        <li>
+                            <a href="#">金融资讯</a>
+                        </li>
+                        <li>
+                            <a href="#">售全球客服</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <p style="width:100%;">商户</p>
+                        <li>
+                            <a href="#">合作招商</a>
+                        </li>
+                        <li>
+                            <a href="#">学习中心</a>
+                        </li>
+                        <li>
+                            <a href="#">商家后台</a>
+                        </li>
+                        <li>
+                            <a href="#">京麦工作台</a>
+                        </li>
+                        <li>
+                            <a href="#">商家帮助</a>
+                        </li>
+                        <li>
+                            <a href="#">规则平台</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <span>|</span>
+            <li class="header_wzdh">
+                <a href="#">网站导航</a>
+                <img src="/static/search/image/down-@1x.png" />
+                <!--<b class="glyphicon glyphicon-menu-down"></b>-->
+                <div class="header_wzdh_txt">
+                    <ul style="width: 25%;">
+                        <p style="width:100%;">特色主题</p>
+                        <li>
+                            <a href="#">谷粒商城试用</a>
+                        </li>
+                        <li>
+                            <a href="#">谷粒商城金融</a>
+                        </li>
+                        <li>
+                            <a href="#">全球售</a>
+                        </li>
+                        <li>
+                            <a href="#">国际站</a>
+                        </li>
+                        <li>
+                            <a href="#">谷粒商城会员</a>
+                        </li>
+                        <li>
+                            <a href="#">谷粒商城预售</a>
+                        </li>
+                        <li>
+                            <a href="#">买什么</a>
+                        </li>
+                        <li>
+                            <a href="#">俄语站</a>
+                        </li>
+                        <li>
+                            <a href="#">装机大师</a>
+                        </li>
+                        <li>
+                            <a href="#">0元评测</a>
+                        </li>
+                        <li>
+                            <a href="#">定期送</a>
+                        </li>
+                        <li>
+                            <a href="#">港澳售</a>
+                        </li>
+                        <li>
+                            <a href="#">优惠券</a>
+                        </li>
+                        <li>
+                            <a href="#">秒杀</a>
+                        </li>
+                        <li>
+                            <a href="#">闪购</a>
+                        </li>
+                        <li>
+                            <a href="#">印尼站</a>
+                        </li>
+                        <li>
+                            <a href="#">谷粒商城金融科技</a>
+                        </li>
+                        <li>
+                            <a href="#">In货推荐</a>
+                        </li>
+                        <li>
+                            <a href="#">陪伴计划</a>
+                        </li>
+                        <li>
+                            <a href="#">出海招商</a>
+                        </li>
+                    </ul>
+                    <ul style="width: 20%;">
+                        <p style="width:100%;">行业频道</p>
+                        <li>
+                            <a href="#">手机</a>
+                        </li>
+                        <li>
+                            <a href="#">智能数码</a>
+                        </li>
+                        <li>
+                            <a href="#">玩3c</a>
+                        </li>
+                        <li>
+                            <a href="#">电脑办公</a>
+                        </li>
+                        <li>
+                            <a href="#">家用电器</a>
+                        </li>
+                        <li>
+                            <a href="#">谷粒商城智能</a>
+                        </li>
+                        <li>
+                            <a href="#">服装城</a>
+                        </li>
+                        <li>
+                            <a href="#">美妆馆</a>
+                        </li>
+                        <li>
+                            <a href="#">家装城</a>
+                        </li>
+                        <li>
+                            <a href="#">母婴</a>
+                        </li>
+                        <li>
+                            <a href="#">食品</a>
+                        </li>
+                        <li>
+                            <a href="#">运动户外</a>
+                        </li>
+                        <li>
+                            <a href="#">农资频道</a>
+                        </li>
+                        <li>
+                            <a href="#">整车</a>
+                        </li>
+                        <li>
+                            <a href="#">图书</a>
+                        </li>
+                    </ul>
+                    <ul style="width: 21%;">
+                        <p style="width:100%;">生活服务</p>
+                        <li>
+                            <a href="#">白条</a>
+                        </li>
+                        <li>
+                            <a href="#">谷粒商城金融App</a>
+                        </li>
+                        <li>
+                            <a href="#">谷粒商城小金库</a>
+                        </li>
+                        <li>
+                            <a href="#">理财</a>
+                        </li>
+                        <li>
+                            <a href="#">智能家电</a>
+                        </li>
+                        <li>
+                            <a href="#">话费</a>
+                        </li>
+                        <li>
+                            <a href="#">水电煤</a>
+                        </li>
+                        <li>
+                            <a href="#">彩票</a>
+                        </li>
+                        <li>
+                            <a href="#">旅行</a>
+                        </li>
+                        <li>
+                            <a href="#">机票酒店</a>
+                        </li>
+                        <li>
+                            <a href="#">电影票</a>
+                        </li>
+                        <li>
+                            <a href="#">谷粒商城到家</a>
+                        </li>
+                        <li>
+                            <a href="#">谷粒商城众测</a>
+                        </li>
+                        <li>
+                            <a href="#">游戏</a>
+                        </li>
+                    </ul>
+                    <ul style="width: 23%; border-right: 0;">
+                        <p style="width:100%;">更多精选</p>
+                        <li>
+                            <a href="#">合作招商</a>
+                        </li>
+                        <li>
+                            <a href="#">谷粒商城通信</a>
+                        </li>
+                        <li>
+                            <a href="#">谷粒商城E卡</a>
+                        </li>
+                        <li>
+                            <a href="#">企业采购</a>
+                        </li>
+                        <li>
+                            <a href="#">服务市场</a>
+                        </li>
+                        <li>
+                            <a href="#">办公生活馆</a>
+                        </li>
+                        <li>
+                            <a href="#">乡村招募</a>
+                        </li>
+                        <li>
+                            <a href="#">校园加盟</a>
+                        </li>
+                        <li>
+                            <a href="#">京友帮</a>
+                        </li>
+                        <li>
+                            <a href="#">谷粒商城社区</a>
+                        </li>
+                        <li>
+                            <a href="#">智能社区</a>
+                        </li>
+                        <li>
+                            <a href="#">游戏社区</a>
+                        </li>
+                        <li>
+                            <a href="#">知识产权维权</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <span>|</span>
+            <li class="header_sjjd">
+                <a href="#">手机谷粒商城</a>
+                <div class="header_sjjd_div">
+                    <img src="/static/search/img/01.png" />
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--搜索导航-->
+<div class="header_sous">
+    <div class="logo">
+        <a href="http://gulimall.com/"><img src="/static/search/image/logo1.jpg" alt=""></a>
+    </div>
+    <div class="header_form">
+        <input id="keyword_input" type="text" placeholder="手机" th:value="${param.keyword}"/>
+        <a href="javascript:searchByKeyword()">搜索</a>
+    </div>
+    <div class="header_ico">
+        <div class="header_gw">
+            <span><a href="#">我的购物车</a></span>
+            <img src="/static/search/image/settleup-@1x.png" />
+            <span>0</span>
+        </div>
+        <div class="header_ko">
+            <p>购物车中还没有商品，赶紧选购吧！</p>
+        </div>
+    </div>
+    <div class="header_form_nav">
+        <ul>
+            <li>
+                <a href="#">谷粒商城之家</a>
+            </li>
+            <li>
+                <a href="#">谷粒商城专卖店</a>
+            </li>
+            <li>
+                <a href="#">平板</a>
+            </li>
+            <li>
+                <a href="#">电脑</a>
+            </li>
+            <li>
+                <a href="#">ipad</a>
+            </li>
+        </ul>
+    </div>
+    <nav>
+        <ul>
+            <li class="nav_li1">
+                <a href="#">全部商品分类</a>
+            </li>
+            <li class="nav_li">
+                <a href="#">服装城</a>
+            </li>
+            <li class="nav_li">
+                <a href="#">没装馆</a>
+            </li>
+            <li class="nav_li">
+                <a href="#">超市</a>
+            </li>
+            <li class="nav_li">
+                <a href="#">生鲜</a>
+            </li>
+        </ul>
+        <div class="spacer">|</div>
+        <ul>
+            <li class="nav_li">
+                <a href="#">全球购</a>
+            </li>
+            <li class="nav_li">
+                <a href="#">闪购</a>
+            </li>
+            <li class="nav_li">
+                <a href="#">拍卖</a>
+            </li>
+        </ul>
+        <div class="spacer">|</div>
+        <ul>
+            <li class="nav_li">
+                <a href="#">金融</a>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="header_main_left">
+        <ul>
+            <li>
+                <a href="#" class="header_main_left_a"><b>家用电器</b></a>
+            </li>
+            <li class="header_li2">
+                <a href="#" class="header_main_left_a"><b>手机</b> / <b>运营商</b> / <b>数码</b></a>
+                <div class="header_main_left_main">
+                    <div class="header_sj">
+                        <a href="#" class="header_sj_a">玩3c</a>
+                        <a href="#" class="header_sj_a">手机频道</a>
+                        <a href="#" class="header_sj_a">网上营业厅</a>
+                        <a href="#" class="header_sj_a">配件选购中心</a>
+                        <a href="#" class="header_sj_a">企业购</a>
+                        <a href="#" class="header_sj_a">以旧换新</a>
+                    </div>
+                    <ol class="header_ol">
+                        <a href="#" style="color: #111;" class="aaa">手机通讯 ></a>
+                        <li>
+                            <a href="#" style="color: #999;">手机</a>
+                            <a href="#" style="color: #999;">对讲机</a>
+                            <a href="#" style="color: #999;">手机维修</a>
+                            <a href="#" style="color: #999;">以旧换新</a>
+                        </li>
+                        <a href="#" style="color: #111;" class="aaa">运营商 ></a>
+                        <li>
+                            <a href="#" style="color: #999;">合约机</a>
+                            <a href="#" style="color: #999;">固话宽带</a>
+                            <a href="#" style="color: #999;">办套餐</a>
+                            <a href="#" style="color: #999;">从话费/流量</a>
+                            <a href="#" style="color: #999;">中国电信</a>
+                            <a href="#" style="color: #999;">中国移动</a>
+                            <a href="#" style="color: #999;">中国联通</a>
+                            <a href="#" style="color: #999;">谷粒商城通信</a>
+                            <a href="#" style="color: #999;">170选号</a>
+                        </li>
+                        <a href="#" style="color: #111;" class="aaa">手机配件 ></a>
+                        <li style="height: 60px;">
+
+                            <a href="#" style="color: #999;">手机壳</a>
+                            <a href="#" style="color: #999;">贴膜</a>
+                            <a href="#" style="color: #999;">手机储存卡</a>
+                            <a href="#" style="color: #999;">数据线</a>
+                            <a href="#" style="color: #999;">存电器</a>
+                            <a href="#" style="color: #999;">手机耳机</a>
+                            <a href="#" style="color: #999;">创业配件</a>
+                            <a href="#" style="color: #999;">手机饰品</a>
+                            <a href="#" style="color: #999;">手机电池</a>
+                            <a href="#" style="color: #999;">苹果周边</a>
+                            <a href="#" style="color: #999;">移动电源</a>
+                            <a href="#" style="color: #999;">蓝牙耳机</a>
+                            <a href="#" style="color: #999;">手机支架</a>
+                            <a href="#" style="color: #999;">车载配件</a>
+                            <a href="#" style="color: #999;">拍照配件</a>
+
+                        </li>
+                        <a href="#" style="color: #111;" class="aaa">摄影摄像 ></a>
+                        <li style="height: 60px;">
+
+                            <a href="#" style="color: #999;">数码相机</a>
+                            <a href="#" style="color: #999;">单电/微单相机</a>
+                            <a href="#" style="color: #999;">单反相机</a>
+                            <a href="#" style="color: #999;">拍立得</a>
+                            <a href="#" style="color: #999;">运动相机</a>
+                            <a href="#" style="color: #999;">摄像机</a>
+                            <a href="#" style="color: #999;">镜头</a>
+                            <a href="#" style="color: #999;">户外器材</a>
+                            <a href="#" style="color: #999;">影棚器材</a>
+                            <a href="#" style="color: #999;">冲印服务</a>
+                            <a href="#" style="color: #999;">数码相框</a>
+                        </li>
+                        <a href="#" style="color: #111;" class="aaa">数码配件 ></a>
+                        <li style="height: 60px;">
+
+                            <a href="#" style="color: #999;">三脚架/云台</a>
+                            <a href="#" style="color: #999;">相机包</a>
+                            <a href="#" style="color: #999;">滤镜</a>
+                            <a href="#" style="color: #999;">散光灯/手柄</a>
+                            <a href="#" style="color: #999;">相机清洁</a>
+                            <a href="#" style="color: #999;">机身附件</a>
+                            <a href="#" style="color: #999;">镜头附件</a>
+                            <a href="#" style="color: #999;">读卡器</a>
+                            <a href="#" style="color: #999;">支架</a>
+                            <a href="#" style="color: #999;">电池/存电器</a>
+
+                        </li>
+                        <a href="#" style="color: #111;" class="aaa">影音娱乐 ></a>
+                        <li>
+
+                            <a href="#" style="color: #999;">耳机/耳麦</a>
+                            <a href="#" style="color: #999;">音箱/音响</a>
+                            <a href="#" style="color: #999;">智能音箱</a>
+                            <a href="#" style="color: #999;">便携/无线音箱</a>
+                            <a href="#" style="color: #999;">收音机</a>
+                            <a href="#" style="color: #999;">麦克风</a>
+                            <a href="#" style="color: #999;">MP3/MP4</a>
+                            <a href="#" style="color: #999;">专业音频</a>
+                        </li>
+                        <a href="#" style="color: #111;" class="aaa">智能设备 ></a>
+                        <li style="height: 60px;">
+
+                            <a href="#" style="color: #999;">智能手环</a>
+                            <a href="#" style="color: #999;">智能手表</a>
+                            <a href="#" style="color: #999;">智能眼镜</a>
+                            <a href="#" style="color: #999;">智能机器人</a>
+                            <a href="#" style="color: #999;">运动跟踪器</a>
+                            <a href="#" style="color: #999;">健康监测</a>
+                            <a href="#" style="color: #999;">智能配饰</a>
+                            <a href="#" style="color: #999;">智能家居</a>
+                            <a href="#" style="color: #999;">体感车</a>
+                            <a href="#" style="color: #999;">无人机</a>
+                            <a href="#" style="color: #999;">其他配件</a>
+                        </li>
+                        <a href="#" style="color: #111;" class="aaa">电子教育 ></a>
+                        <li>
+                            <a href="#" style="color: #999;">学生平板</a>
+                            <a href="#" style="color: #999;">点读机</a>
+                            <a href="#" style="color: #999;">早教益智</a>
+                            <a href="#" style="color: #999;">录音笔</a>
+                            <a href="#" style="color: #999;">电纸书</a>
+                            <a href="#" style="color: #999;">电子词典</a>
+                            <a href="#" style="color: #999;">复读机</a>
+                        </li>
+                    </ol>
+                    <div class="header_r">
+                        <div class="header_r_tu">
+                            <a href="#"><img src="/static/search/img/56b2f385n8e4eb051.jpg" /></a>
+                            <a href="#"><img src="/static/search/img/56b2f385n8e4eb051.jpg" /></a>
+                            <a href="#"><img src="/static/search/img/56b2f385n8e4eb051.jpg" /></a>
+                            <a href="#"><img src="/static/search/img/56b2f385n8e4eb051.jpg" /></a>
+                            <a href="#"><img src="/static/search/img/56b2f385n8e4eb051.jpg" /></a>
+                            <a href="#"><img src="/static/search/img/56b2f385n8e4eb051.jpg" /></a>
+                            <a href="#"><img src="/static/search/img/56b2f385n8e4eb051.jpg" /></a>
+                            <a href="#"><img src="/static/search/img/56b2f385n8e4eb051.jpg" /></a>
+                        </div>
+                        <div class="header_r_tu1">
+                            <a href="#"><img src="/static/search/img/JD_ash7 - 副本.png" /></a>
+                            <a href="#"><img src="/static/search/img/JD_ash6.png" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>电脑</b> / <b>办公</b></a>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>家居</b> / <b>家具</b> / <b>家装</b> / <b>厨具</b></a>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>男装</b> / <b>女装</b> / <b>童装</b> / <b>内衣</b></a>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>美妆个护 </b>/ <b>宠物</b></a>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>女鞋</b> / <b>箱包</b> / <b>钟表</b> / <b>珠宝</b></a>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>男鞋</b> / <b>运动</b> / <b>户外</b></a>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>汽车</b> / <b>汽车用品</b></a>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>母婴</b> / <b>玩具乐器</b></a>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>食品</b> / <b>酒类</b> / <b>生鲜</b> / <b>特产</b></a>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>礼品鲜花</b> / <b>农资绿植</b></a>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>医药保健</b> / <b>计生情趣</b></a>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>图书</b> / <b>音箱</b>/ <b>电子书</b></a>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>机票</b> / <b>酒店</b> / <b>旅游</b> / <b>生活</b></a>
+            </li>
+            <li>
+                <a href="#" class="header_main_left_a"><b>理财</b> / <b>众筹</b> / <b>白条</b> / <b>保险</b></a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+<hr style="border: 1px solid red;margin-top: -7px;">
+
+<!--热卖促销-->
+<div class="JD_temai">
+    <div class="JD_main">
+        <div class="JD_left">
+            <div class="hd">
+                热卖推荐
+            </div>
+            <div class="bd mc">
+                <ul class="mc">
+                    <li>
+                        <a href="#" class="mc_a"><img src="/static/search/img/5a28b5a1n8a5c095f.jpg" alt=""></a>
+                        <div class="mc_div">
+                            <a href="#" class="mc_div_a1">
+                                <em>华为 HUAWEI nova 2S 全面屏四摄 6GB +64GB 曜石黑 移动联通电信4G手机 双卡双待</em>
+                            </a>
+                            <p>
+                                <strong>
+                                    <em class="number J-p-5963064">￥2999.00</em>
+                                </strong>
+                            </p>
+                            <a href="#" class="mc_div_a2">立即抢购</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="mc_a"><img src="/static/search/img/59f5eef1n99542494.jpg" alt=""></a>
+                        <div class="mc_div">
+                            <a href="#" class="mc_div_a1">
+                                <em>【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</em>
+                            </a>
+                            <p>
+                                <strong>
+                                    <em class="number J-p-5963064">￥1699.00</em>
+                                </strong>
+                            </p>
+                            <a href="#" class="mc_div_a2">立即抢购</a>
+                        </div>
+                    </li>
+                    <li style="margin-right: 0">
+                        <a href="#" class="mc_a"><img src="/static/search/img/59f5eef1n99542494.jpg" alt=""></a>
+                        <div class="mc_div">
+                            <a href="#" class="mc_div_a1">
+                                <em>华为 HUAWEI nova 2S 全面屏四摄 6GB +64GB 曜石黑 移动联通电信4G手机 双卡双待</em>
+                            </a>
+                            <p>
+                                <strong>
+                                    <em class="number J-p-5963064">￥2999.00</em>
+                                </strong>
+                            </p>
+                            <a href="#" class="mc_div_a2">立即抢购</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="JD_right">
+            <div class="hd"> 促销活动</div>
+            <div class="bd">
+                <ul>
+                    <li> . <a href="#">红米千元全面屏手机上市</a></li>
+                    <li> . <a href="#">锤子坚果Pro2火爆预约中</a></li>
+                    <li> . <a href="#">大牌新品 疯狂抢购</a></li>
+                    <li> . <a href="#">X20 vivo蓝新色上市</a></li>
+                    <li> . <a href="#">荣耀畅玩7X新品上市</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--手机-->
+<div class="JD_ipone">
+    <div class="JD_ipone_bar">
+        <div class="JD_ipone_one a">
+            <a href="#">手机</a>
+        </div>
+        <i><img src="/static/search/image/right-@1x.png" alt=""></i>
+        <div class="JD_ipone_one b">
+            <a href="#" class="qqq">手机通讯录 <img src="/static/search/image/down-@1x.png" alt=""></a>
+            <div>
+                <a href="#">手机通讯</a>
+                <a href="#">运营商</a>
+                <a href="#">手机配件</a>
+                <a href="#">手机服务</a>
+            </div>
+        </div>
+        <i><img src="/static/search/image/right-@1x.png" alt=""></i>
+        <div class="JD_ipone_one c">
+            <a href="#" class="qqq">手机 <img src="/static/search/image/down-@1x.png" alt=""></a>
+            <div>
+                <a href="#">手机</a>
+                <a href="#">老人机</a>
+                <a href="#">对讲机</a>
+                <a href="#">女性手机</a>
+                <a href="#">超续航手机</a>
+                <a href="#">全面屏手机</a>
+                <a href="#">拍照手机</a>
+                <a href="#">游戏手机</a>
+            </div>
+        </div>
+        <div class="JD_ipone_one c">
+            <!-- 遍历面包屑功能 -->
+            <a th:href="${nav.link}" th:each="nav:${result.navs}"><span th:text="${nav.navName}"></span>：<span th:text="${nav.navValue}"></span> x</a>
+        </div>
+
+        <i><img src="/static/search/image/right-@1x.png" alt=""></i>
+    </div>
+</div>
+
+<!--商品筛选和排序-->
+<div class="JD_banner w">
+    <div class="JD_nav">
+        <div class="JD_selector">
+            <!--手机商品筛选-->
+            <div class="title">
+                <h3><b>手机</b><em>商品筛选</em></h3>
+                <div class="st-ext">共&nbsp;<span>10135</span>个商品 </div>
+            </div>
+            <div class="JD_nav_logo">
+                <!--品牌-->
+                <div class="JD_nav_wrap">
+                    <div class="sl_key">
+                        <span>品牌：</span>
+                    </div>
+                    <div class="sl_value">
+                        <div class="sl_value_logo">
+                            <ul>
+                                <li th:each="brand: ${result.getBrands()}">
+                                    <a href="#"  th:href="${'javascript:searchProducts(&quot;brandId&quot;,'+brand.brandId+')'}">
+                                        <img src="/static/search/img/598033b4nd6055897.jpg" alt="" th:src="${brand.brandImg}">
+                                        <div th:text="${brand.brandName}">
+                                            华为(HUAWEI)
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sl_ext">
+                        <a href="#">
+                            更多
+                            <i style='background: url("image/search.ele.png")no-repeat 3px 7px'></i>
+                            <b style='background: url("image/search.ele.png")no-repeat 3px -44px'></b>
+                        </a>
+                        <a href="#">
+                            多选
+                            <i>+</i>
+                            <span>+</span>
+                        </a>
+                    </div>
+                </div>
+                <!--分类-->
+                <div class="JD_pre" th:each="catalog: ${result.getCatalogs()}">
+                    <div class="sl_key">
+                        <span>分类：</span>
+                    </div>
+                    <div class="sl_value">
+                        <ul>
+                            <li><a href="#" th:text="${catalog.getCatalogName()}" th:href="${'javascript:searchProducts(&quot;catalogId&quot;,'+catalog.catalogId+')'}">0-安卓（Android）</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--价格-->
+                <div class="JD_pre">
+                    <div class="sl_key">
+                        <span>价格：</span>
+                    </div>
+                    <div class="sl_value">
+                        <ul>
+                            <li><a href="#">0-499</a></li>
+                            <li><a href="#">500-999</a></li>
+                            <li><a href="#">1000-1699</a></li>
+                            <li><a href="#">1700-2799</a></li>
+                            <li><a href="#">2800-4499</a></li>
+                            <li><a href="#">4500-11999</a></li>
+                            <li><a href="#">12000以上</a></li>
+                            <li class="sl_value_li">
+                                <input type="text">
+                                <p>-</p>
+                                <input type="text">
+                                <a href="#">确定</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--商品属性-->
+                <div class="JD_pre" th:each="attr: ${result.getAttrs()}" >
+                    <div class="sl_key">
+                        <span th:text="${attr.getAttrName()}">系统：</span>
+                    </div>
+                    <div class="sl_value">
+                        <ul>
+                            <li th:each="val: ${attr.getAttrValue()}">
+                                <a href="#"
+                                   th:text="${val}"
+                                   th:href="${'javascript:searchProducts(&quot;attrs&quot;,&quot;'+attr.attrId+'_'+val+'&quot;)'}">0-安卓（Android）</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="JD_show">
+                <a href="#">
+                    <span>
+                        更多选项（ CPU核数、网络、机身颜色 等）
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!--排序-->
+        <div class="JD_banner_main">
+            <!--商品精选-->
+            <div class="JD_con_left">
+                <div class="JD_con_left_bar">
+                    <div class="JD_con_one">
+                        <div class="mt">
+                            <h3>商品精选</h3>
+                            <span>广告</span>
+                        </div>
+                        <div class="mc">
+                            <ul>
+                                <li>
+                                    <a href="#" title="vivo X9s 全网通 4GB+64GB 磨砂黑 移动联通电信4G手机 双卡双待"><img src="/static/search/img/59bf3c47n91d65c73.jpg" alt=""></a>
+                                    <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                                        <em>华为 HUAWEI nova 2S 全面屏四摄 6GB +64GB 曜石黑 移动联通电信4G手机 双卡双待</em>
+                                    </a>
+                                    <div class="mc_price">
+                                        <strong class="price">
+                                            <span class="J-p-5963064">￥2999.00</span>
+                                        </strong>
+                                        <span class="mc-ico" title="购买本商品送赠品">
+                                            <i class="goods-icons">赠品</i>
+                                        </span>
+                                    </div>
+                                    <div class="mc_rev">
+                                        已有
+                                        <a href="#" class="number">12466</a>
+                                        人评价
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" title="vivo X9s 全网通 4GB+64GB 磨砂黑 移动联通电信4G手机 双卡双待"><img src="/static/search/img/59bf3c47n91d65c73.jpg" alt=""></a>
+                                    <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                                        <em>华为 HUAWEI nova 2S 全面屏四摄 6GB +64GB 曜石黑 移动联通电信4G手机 双卡双待</em>
+                                    </a>
+                                    <div class="mc_price">
+                                        <strong class="price">
+                                            <span class="J-p-5963064">￥2999.00</span>
+                                        </strong>
+                                        <span class="mc-ico" title="购买本商品送赠品">
+                                            <i class="goods-icons">赠品</i>
+                                        </span>
+                                    </div>
+                                    <div class="mc_rev">
+                                        已有
+                                        <a href="#" class="number">12466</a>
+                                        人评价
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" title="vivo X9s 全网通 4GB+64GB 磨砂黑 移动联通电信4G手机 双卡双待"><img src="/static/search/img/593ba628n8794c6a6.jpg" alt=""></a>
+                                    <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                                        <em>诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机</em>
+                                    </a>
+                                    <div class="mc_price">
+                                        <strong class="price">
+                                            <span class="J-p-5963064">￥1799.00</span>
+                                        </strong>
+                                        <span class="mc-ico" title="购买本商品送赠品">
+                                            <i class="goods-icons">赠品</i>
+                                        </span>
+                                    </div>
+                                    <div class="mc_rev">
+                                        已有
+                                        <a href="#" class="number">15600</a>
+                                        人评价
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" title="vivo X9s 全网通 4GB+64GB 磨砂黑 移动联通电信4G手机 双卡双待"><img src="/static/search/img/5919637an271a1301.jpg" alt=""></a>
+                                    <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                                        <em>vivo Xplay6 全网通 6GB+64GB 磨砂黑 移动联通电信4G手机 双卡双待</em>
+                                    </a>
+                                    <div class="mc_price">
+                                        <strong class="price">
+                                            <span class="J-p-5963064">￥3498.00</span>
+                                        </strong>
+                                        <span class="mc-ico" title="购买本商品送赠品">
+                                            <i class="goods-icons">赠品</i>
+                                        </span>
+                                    </div>
+                                    <div class="mc_rev">
+                                        已有
+                                        <a href="#" class="number">5369</a>
+                                        人评价
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="JD_con_one">
+                        <div class="mt">
+                            <h3>达人选购</h3>
+                        </div>
+                        <div class="mc">
+                            <ul>
+                                <li>
+                                    <a href="#" title="vivo X9s 全网通 4GB+64GB 磨砂黑 移动联通电信4G手机 双卡双待"><img src="/static/search/img/59bf3c47n91d65c73.jpg" alt=""></a>
+                                    <a href="#">
+                                        <em>华为 HUAWEI nova 2S 全面屏四摄 6GB +64GB 曜石黑 移动联通电信4G手机 双卡双待</em>
+                                    </a>
+                                    <div class="mc_price">
+                                        <strong class="price">
+                                            <span class="J-p-5963064">￥2999.00</span>
+                                        </strong>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" title="vivo X9s 全网通 4GB+64GB 磨砂黑 移动联通电信4G手机 双卡双待"><img src="/static/search/img/59bf3c47n91d65c73.jpg" alt=""></a>
+                                    <a href="#">
+                                        <em>华为 HUAWEI nova 2S 全面屏四摄 6GB +64GB 曜石黑 移动联通电信4G手机 双卡双待</em>
+                                    </a>
+                                    <div class="mc_price">
+                                        <strong class="price">
+                                            <span class="J-p-5963064">￥2999.00</span>
+                                        </strong>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" title="vivo X9s 全网通 4GB+64GB 磨砂黑 移动联通电信4G手机 双卡双待"><img src="/static/search/img/593ba628n8794c6a6.jpg" alt=""></a>
+                                    <a href="#">
+                                        <em>诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机</em>
+                                    </a>
+                                    <div class="mc_price">
+                                        <strong class="price">
+                                            <span class="J-p-5963064">￥1799.00</span>
+                                        </strong>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" title="vivo X9s 全网通 4GB+64GB 磨砂黑 移动联通电信4G手机 双卡双待"><img src="/static/search/img/5919637an271a1301.jpg" alt=""></a>
+                                    <a href="#">
+                                        <em>vivo Xplay6 全网通 6GB+64GB 磨砂黑 移动联通电信4G手机 双卡双待</em>
+                                    </a>
+                                    <div class="mc_price">
+                                        <strong class="price">
+                                            <span class="J-p-5963064">￥3498.00</span>
+                                        </strong>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="JD_con_one" style="border:none;">
+                        <div class="mt">
+                            <h3>商品精选</h3>
+                            <span>广告</span>
+                        </div>
+                        <div class="mc">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="/static/search/img/599a806bn9d829c1c.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="/static/search/img/593e4de0n5ff878a4.jpg" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--综合排序-->
+            <div class="JD_con_right">
+                <div class="filter">
+                    <!--综合排序-->
+                    <div class="filter_top">
+                        <div class="filter_top_left" th:with="p = ${param.sort}, priceRange = ${param.skuPrice}">
+                            <a sort="hotScore"
+                               th:class="${(!#strings.isEmpty(p) && #strings.startsWith(p,'hotScore') && #strings.endsWith(p,'desc')) ? 'sort_a desc' : 'sort_a'}"
+                               th:attr="style=${(#strings.isEmpty(p) || #strings.startsWith(p,'hotScore')) ?
+                                   'color: #fff; border-color: #e4393c; background: #e4393c;':'color: #333; border-color: #ccc; background: #fff;' }">
+                                综合排序[[${(!#strings.isEmpty(p) && #strings.startsWith(p,'hotScore') &&
+                                #strings.endsWith(p,'desc')) ?'↓':'↑' }]]</a>
+                            <a sort="saleCount"
+                               th:class="${(!#strings.isEmpty(p) && #strings.startsWith(p,'saleCount') && #strings.endsWith(p,'desc')) ? 'sort_a desc' : 'sort_a'}"
+                               th:attr="style=${(!#strings.isEmpty(p) && #strings.startsWith(p,'saleCount')) ?
+                                   'color: #fff; border-color: #e4393c; background: #e4393c;':'color: #333; border-color: #ccc; background: #fff;' }">
+                                销量[[${(!#strings.isEmpty(p) && #strings.startsWith(p,'saleCount') &&
+                                #strings.endsWith(p,'desc'))?'↓':'↑'  }]]</a>
+                            <a sort="skuPrice"
+                               th:class="${(!#strings.isEmpty(p) && #strings.startsWith(p,'skuPrice') && #strings.endsWith(p,'desc')) ? 'sort_a desc' : 'sort_a'}"
+                               th:attr="style=${(!#strings.isEmpty(p) && #strings.startsWith(p,'skuPrice')) ?
+                                   'color: #fff; border-color: #e4393c; background: #e4393c;':'color: #333; border-color: #ccc; background: #fff;' }">
+                                价格[[${(!#strings.isEmpty(p) && #strings.startsWith(p,'skuPrice') &&
+                                #strings.endsWith(p,'desc'))?'↓':'↑'  }]]</a>
+                            <a sort="hotScore" class="sort_a">评论分</a>
+                            <a sort="hotScore" class="sort_a">上架时间</a>
+                            <input id="skuPriceFrom" type="number"
+                                   th:value="${#strings.isEmpty(priceRange)?'':#strings.substringBefore(priceRange,'_')}"
+                                   style="width: 100px; margin-left: 30px">
+                            -
+                            <input id="skuPriceTo" type="number"
+                                   th:value="${#strings.isEmpty(priceRange)?'':#strings.substringAfter(priceRange,'_')}"
+                                   style="width: 100px">
+                            <button id="skuPriceSearchBtn">确定</button>
+                        </div>
+                        <div class="filter_top_right">
+                            <span class="fp-text">
+                               <b>1</b><em>/</em><i>169</i>
+                           </span>
+                            <a href="#" class="prev"><</a>
+                            <a href="#" class="next"> > </a>
+                        </div>
+                    </div>
+                    <!--收货地址-->
+                    <div class="filter_bottom">
+                        <div class="filter_bottom_left">
+                            <div class="fs-cell">收货地</div>
+                            <div class="dizhi">
+                                <div class="dizhi_show">
+                                    <em>北京朝阳区三环以内</em>
+                                    <b></b>
+                                </div>
+                            </div>
+                            <div class="dizhi_con">
+                                <ul id="tab">
+                                    <li id="tab1" value="1">北京 <img src="/static/search/image/down-@1x.png" alt=""></li>
+                                    <li id="tab2" value="2">朝阳 <img src="/static/search/image/down-@1x.png" alt=""></li>
+                                    <li id="tab3" value="3">三环以内 <img src="/static/search/image/down-@1x.png" alt=""></li>
+                                </ul>
+                                <div id="container">
+                                    <div id="content1" style="z-index: 1;">
+                                        <a href="#">北京</a>
+                                        <a href="#">上海</a>
+                                        <a href="#">天津</a>
+                                        <a href="#">重庆</a>
+                                        <a href="#">河北</a>
+                                        <a href="#">山西</a>
+                                        <a href="#">河南</a>
+                                        <a href="#">辽宁</a>
+                                        <a href="#">吉林</a>
+                                        <a href="#">黑龙江</a>
+                                        <a href="#">内蒙古</a>
+                                        <a href="#">江苏</a>
+                                        <a href="#">山东</a>
+                                        <a href="#">安徽</a>
+                                        <a href="#">浙江</a>
+                                        <a href="#">福建</a>
+                                        <a href="#">湖北</a>
+                                        <a href="#">湖南</a>
+                                        <a href="#">广东</a>
+                                        <a href="#">广西</a>
+                                        <a href="#">江西</a>
+                                        <a href="#">四川</a>
+                                        <a href="#">海南</a>
+                                        <a href="#">贵州</a>
+                                        <a href="#">云南</a>
+                                        <a href="#">西藏</a>
+                                        <a href="#">陕西</a>
+                                        <a href="#">甘肃</a>
+                                        <a href="#">青海</a>
+                                        <a href="#">宁夏</a>
+                                        <a href="#">新疆</a>
+                                        <a href="#">港澳</a>
+                                        <a href="#">台湾</a>
+                                        <a href="#">钓鱼岛</a>
+                                        <a href="#">海外</a>
+
+                                    </div>
+                                    <div id="content2">
+                                        <a href="#">朝阳区</a>
+                                        <a href="#">海淀区</a>
+                                        <a href="#">西城区</a>
+                                        <a href="#">东城区</a>
+                                        <a href="#">大兴区</a>
+                                        <a href="#">丰台区</a>
+                                        <a href="#">昌平区</a>
+                                        <a href="#">顺义区</a>
+
+                                    </div>
+                                    <div id="content3">
+                                        <a href="#">三环以内</a>
+                                        <a href="#">管庄</a>
+                                        <a href="#">北苑</a>
+                                        <a href="#">定福庄</a>
+                                        <a href="#">三环到四环之间</a>
+                                        <a href="#">四环到五环之间</a>
+                                        <a href="#">五环到六环之间</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter_bottom_right">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        谷粒商城配送
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        京尊达                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        货到付款
+                                    </a>
+                                </li>
+                                <li>
+                                    <a th:with="check = ${param.hasStock}">
+                                        <input id="showHasStock" type="checkbox" th:checked="${#strings.equals(check,'1')?true:false}">
+                                        仅显示有货
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i></i>
+                                        可配送全球
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!--排序内容-->
+                    <div class="rig_tab">
+                        <div th:each="product : ${result.getProduct()}">
+                            <div class="ico">
+                                <i class="iconfont icon-weiguanzhu"></i>
+                                <a href="/static/search/#">关注</a>
+                            </div>
+                            <p class="da">
+                                <a th:href="|http://item.gulimall.com/${product.skuId}.html|" >
+                                    <img   class="dim" th:src="${product.skuImg}">
+                                </a>
+                            </p>
+                            <ul class="tab_im">
+                                <li><a href="/static/search/#" title="黑色">
+                                    <img th:src="${product.skuImg}"></a></li>
+                            </ul>
+                            <p class="tab_R">
+                                <span th:text="'￥' + ${product.skuPrice}">¥5199.00</span>
+                            </p>
+                            <p class="tab_JE">
+                                <a href="/static/search/#" th:utext="${product.skuTitle}">
+                                    Apple iPhone 7 Plus (A1661) 32G 黑色 移动联通电信4G手机
+                                </a>
+                            </p>
+                            <p class="tab_PI">已有<span>11万+</span>热门评价
+                                <a href="/static/search/#">二手有售</a>
+                            </p>
+                            <p class="tab_CP"><a href="/static/search/#" title="谷粒商城Apple产品专营店">谷粒商城Apple产品...</a>
+                                <a href='#' title="联系供应商进行咨询">
+                                    <img src="/static/search/img/xcxc.png">
+                                </a>
+                            </p>
+                            <div class="tab_FO">
+                                <div class="FO_one">
+                                    <p>自营
+                                        <span>谷粒商城自营,品质保证</span>
+                                    </p>
+                                    <p>满赠
+                                        <span>该商品参加满赠活动</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--分页-->
+                    <div class="filter_page">
+                        <div class="page_wrap">
+                            <span class="page_span1">
+                                <a class="page_a" href="#" th:if="${result.pageNum>1}" th:attr="pn=${result.getPageNum()-1}">
+                                    < 上一页
+                                </a>
+                                <a href="#" class="page_a"
+                                   th:each="page: ${result.pageNavs}"
+                                   th:text="${page}"
+                                   th:style="${page==result.pageNum?'border: 0;color:#ee2222;background: #fff':''}"
+                                   th:attr="pn=${page}"
+                                >1</a>
+                                <a href="#" class="page_a" th:if="${result.pageNum<result.totalPages}" th:attr="pn=${result.getPageNum()+1}">
+                                    下一页 >
+                                </a>
+                            </span>
+                            <span class="page_span2">
+                                <em>共<b th:text="${result.totalPages}">169</b>页&nbsp;&nbsp;到第</em>
+                                <input type="number" value="1" class="page_input">
+                                <em>页</em>
+                                <a href="#">确定</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--商品精选-->
+<div class="JD_jx">
+    <div class="JD_jx_title">
+        <div class="mt">
+            <strong class="mt-title">商品精选</strong>
+            <img src="/static/search/image/u-ad.gif" alt="">
+        </div>
+        <div class="mc">
+            <ul>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                            <img src="/static/search/img/5a25ffc7N98b35d49.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mc_name">
+                        <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                            <em>【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</em>
+                        </a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥1999.00</span>
+                        </strong>
+                        <span class="mc_ico" title="购买本商品送赠品">赠品</span>
+                    </div>
+                    <div class="mc_rev">
+                        <a href="#">15930</a>
+                        <span>人好评</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                            <img src="/static/search/img/5a25ffc7N98b35d49.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mc_name">
+                        <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                            <em>【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</em>
+                        </a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥1999.00</span>
+                        </strong>
+                        <span class="mc_ico" title="购买本商品送赠品">赠品</span>
+                    </div>
+                    <div class="mc_rev">
+                        <a href="#">15930</a>
+                        <span>人好评</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                            <img src="/static/search/img/5a25ffc7N98b35d49.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mc_name">
+                        <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                            <em>【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</em>
+                        </a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥1999.00</span>
+                        </strong>
+                        <span class="mc_ico" title="购买本商品送赠品">赠品</span>
+                    </div>
+                    <div class="mc_rev">
+                        <a href="#">15930</a>
+                        <span>人好评</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                            <img src="/static/search/img/5a25ffc7N98b35d49.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mc_name">
+                        <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                            <em>【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</em>
+                        </a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥1999.00</span>
+                        </strong>
+                        <span class="mc_ico" title="购买本商品送赠品">赠品</span>
+                    </div>
+                    <div class="mc_rev">
+                        <a href="#">15930</a>
+                        <span>人好评</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                            <img src="/static/search/img/5a25ffc7N98b35d49.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mc_name">
+                        <a href="#" title="【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待">
+                            <em>【预约版】华为 HUAWEI 畅享7S 全面屏双摄 4GB +64GB 黑色 移动联通电信4G手机 双卡双待</em>
+                        </a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥1999.00</span>
+                        </strong>
+                        <span class="mc_ico" title="购买本商品送赠品">赠品</span>
+                    </div>
+                    <div class="mc_rev">
+                        <a href="#">15930</a>
+                        <span>人好评</span>
+                    </div>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+</div>
+
+<!--猜你喜欢-->
+<div class="JD_cnxh">
+    <div class="JD_jx_title">
+        <div class="mt">
+            <strong class="mt-title">猜你喜欢</strong>
+            <a href="#">
+                <img src="/static/search/image/update.png" alt="">
+                换一批
+            </a>
+        </div>
+        <div class="mc">
+            <ul>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <img src="/static/search/img/59bf3c47n91d65c73.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mc_name">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <em>诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机</em>
+                        </a>
+                    </div>
+                    <div class="mc_rev">
+                        <a href="#">已有80万+人评价</a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥1999.00</span>
+                        </strong>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <img src="/static/search/img/5a28b5c6Ndec5088f.jpg" alt=""></a>
+                    </div>
+                    <div class="mc_name">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <em>诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机</em>
+                        </a>
+                    </div>
+                    <div class="mc_rev">
+                        <a href="#">已有80万+人评价</a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥1999.00</span>
+                        </strong>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机"><img src="/static/search/img/593e4de0n5ff878a4.jpg" alt=""></a>
+                    </div>
+                    <div class="mc_name">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <em>诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机</em>
+                        </a>
+                    </div>
+                    <div class="mc_rev">
+                        <a href="#">已有80万+人评价</a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥1999.00</span>
+                        </strong>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机"><img src="/static/search/img/593e4de0n5ff878a4.jpg" alt=""></a>
+                    </div>
+                    <div class="mc_name">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <em>诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机</em>
+                        </a>
+                    </div>
+                    <div class="mc_rev">
+                        <a href="#">已有80万+人评价</a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥1999.00</span>
+                        </strong>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机"><img src="/static/search/img/59c493a7N3f9b9c85 (1).jpg" alt=""></a>
+                    </div>
+                    <div class="mc_name">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <em>诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机</em>
+                        </a>
+                    </div>
+                    <div class="mc_rev">
+                        <a href="#">已有80万+人评价</a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥1999.00</span>
+                        </strong>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机"><img src="/static/search/img/59c493a7N3f9b9c85 (1).jpg" alt=""></a>
+                    </div>
+                    <div class="mc_name">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <em>诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机</em>
+                        </a>
+                    </div>
+                    <div class="mc_rev">
+                        <a href="#">已有80万+人评价</a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥1999.00</span>
+                        </strong>
+                    </div>
+
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+</div>
+
+<!--我的足迹-->
+<div class="JD_zuji">
+    <div class="JD_jx_title">
+        <div class="mt">
+            <strong class="mt-title">我的足迹</strong>
+            <a href="#">
+                更多浏览记录
+            </a>
+        </div>
+        <div class="mc">
+            <ul>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <img src="/static/search/img/59e58a11Nc38676d5.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥2998.00</span>
+                        </strong>
+                    </div>
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <img src="/static/search/img/5a28acccN73689386.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥88.00</span>
+                        </strong>
+                    </div>
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <img src="/static/search/img/5a1690ddN441b5dce.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥199.00</span>
+                        </strong>
+                    </div>
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <img src="/static/search/img/5a02bde7N7d4453b1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥799.00</span>
+                        </strong>
+                    </div>
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <img src="/static/search/img/5a122dbeN044ebf19.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥599.00</span>
+                        </strong>
+                    </div>
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <img src="/static/search/img/59c493a7N3f9b9c85.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥699.00</span>
+                        </strong>
+                    </div>
+                </li>
+                <li>
+                    <div class="mc_img">
+                        <a href="#" title="诺基亚 7 (Nokia 7) 4GB+64GB 黑色 全网通 双卡双待 移动联通电信4G手机">
+                            <img src="/static/search/img/5a08f6f6N5bab2c1c.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="mc_price">
+                        <strong>
+                            <span>￥715.00</span>
+                        </strong>
+                    </div>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+</div>
+
+<div style="width: 1210px;margin: 0 auto;margin-bottom: 10px"><img src="/static/search/img/5a33a2e0N9a04b4af.jpg" alt=""></div>
+<!--底部-->
+<footer class="footer">
+    <div class="footer_top">
+        <ul>
+            <li>
+                <span></span>
+                <h3>品类齐全，轻松购物</h3>
+            </li>
+            <li>
+                <span></span>
+                <h3>多仓直发，极速配发</h3>
+            </li>
+            <li>
+                <span></span>
+                <h3>正品行货，精致服务</h3>
+            </li>
+            <li>
+                <span></span>
+                <h3>天天低价，畅选无忧</h3>
+            </li>
+        </ul>
+    </div>
+    <div class="footer_center">
+        <ol>
+            <li>购物指南</li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">购物流程</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">会员介绍</a>
+            </li>
+            <li><a href="#">生活旅行</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">常见问题</a>
+            </li>
+            <li><a href="#">大家电</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">联系客服</a>
+            </li>
+        </ol>
+        <ol>
+            <li>配送方式</li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">上门自提</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">211限时达</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">配送服务查询</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">配送费收取标准</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">海外配送</a>
+            </li>
+        </ol>
+        <ol>
+            <li>支付方式</li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">货到付款</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">在线支付</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">分期付款</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">邮局汇款</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">公司转账</a>
+
+            </li>
+        </ol>
+        <ol>
+            <li>售后服务</li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">售后政策</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">价格保护</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">退款说明</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">返修/退换货</a>
+            </li>
+            <li><a href="#">取消订单</a>
+            </li>
+        </ol>
+        <ol>
+            <li>特色服务</li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">夺宝岛</a>
+            </li>
+            <li><a href="#">DIY装机</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">延保服务</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">谷粒商城E卡</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">谷粒商城通信</a>
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">谷粒商城gulimall+</a>
+            </li>
+        </ol>
+        <ol>
+            <li>谷粒商城自营覆盖区域</li>
+            <li>
+                谷粒商城已向全国2661个区县提供自<br> 营配送服务，支持货到付款、
+                <br> POS机刷卡和售后上门服务。
+            </li>
+            <li><a href="#" style="color: rgb(114, 114, 114);">查看详情&gt;</a>
+            </li>
+        </ol>
+    </div>
+    <div class="footer_foot">
+        <p class="footer_p p1">
+            <a href="#">关于我们</a>
+            <span></span>
+            <a href="#" style="color: rgb(114, 114, 114);">联系我们</a>
+            <span></span>
+            <a href="#">联系客服</a>
+            <span></span>
+            <a href="#" style="color: rgb(114, 114, 114);">合作招商</a>
+            <span></span>
+            <a href="#" style="color: rgb(114, 114, 114);">商家帮助</a>
+            <span></span>
+            <a href="#" style="color: rgb(114, 114, 114);">营销中心</a>
+            <span></span>
+            <a href="#" style="color: rgb(114, 114, 114);">手机谷粒商城</a>
+            <span></span>
+            <a href="#" style="color: rgb(114, 114, 114);">友情链接</a>
+            <span></span>
+            <a href="#" style="color: rgb(114, 114, 114);">销售联盟</a>
+            <span></span>
+            <a href="#" style="color: rgb(114, 114, 114);">谷粒商城社区</a>
+            <span></span>
+            <a href="#" style="color: rgb(114, 114, 114);">风险监测</a>
+            <span></span>
+            <a href="#">隐私政策</a>
+            <span></span>
+            <a href="#">谷粒商城公益</a>
+            <span></span>
+            <a href="#" style="color: rgb(114, 114, 114);">English Site</a>
+            <span></span>
+            <a href="#">media &amp; IR</a>
+        </p>
+        <p class="footer_p">
+            <a href="#">京公网安备 11000002000088号</a>
+            <span></span>
+            <a href="#">京ICP证070359号</a>
+            <span></span>
+            <a href="#">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>
+            <span></span>
+            <a href="#">新出发京零 字第大120007号</a>
+        </p>
+        <p class="footer_p">
+            <a href="#">互联网出版许可证编号新出网证(京)字150号</a>
+            <span></span>
+            <a href="#">出版物经营许可证</a>
+            <span></span>
+            <a href="#">网络文化经营许可证京网文[2014]2148-348号</a>
+            <span></span>
+            <a href="#">违法和不良信息举报电话：4006561155</a>
+        </p>
+        <p class="footer_p">
+            <a href="#">Copyright © 2004 - 2017  谷粒商城JD.com 版权所有</a>
+            <span></span>
+            <a href="#">消费者维权热线：4006067733</a>
+            <a href="#">经营证照</a>
+        </p>
+        <p class="footer_p">
+            <a href="#">谷粒商城旗下网站:</a>
+            <a href="#">谷粒商城支付</a>
+            <span></span>
+            <a href="#">谷粒商城云</a>
+        </p>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</footer>
+
+<!--右侧侧边栏-->
+<div class="header_bar">
+    <div class="header_bar_box">
+        <ul>
+            <li>
+                <a href="#"><img src="/static/search/img/wo.png" /></a>
+                <div class="div">
+                    <a href="#">谷粒商城会员</a>
+                </div>
+            </li>
+            <li>
+                <a href="#"><img src="/static/search/img/gouwuche.png" /></a>
+                <div class="div">
+                    <a href="#">购物车</a>
+                </div>
+            </li>
+            <li>
+                <a href="#"><img src="/static/search/img/taoxin.png" /></a>
+                <div class="div">
+                    <a href="#">我的关注</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="#"><img src="/static/search/img/shi.png" /></a>
+                <div class="div">
+                    <a href="#">我的足迹</a>
+                </div>
+            </li>
+            <li>
+                <a href="#"><img src="/static/search/img/xinxi.png" /></a>
+                <div class="div">
+                    <a href="#">我的消息</a>
+                </div>
+            </li>
+            <li>
+                <a href="#"><img src="/static/search/img/qianbao.png" /></a>
+                <div class="div">
+                    <a href="#">资讯JIMI</a>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#"><img src="/static/search/img/fa3f24a70d38bd439261cb7439e517a5.png" /></a>
+                <div class="div">
+                    <a href="#">顶部</a>
+                </div>
+            </li>
+            <li>
+                <a href="#"><img src="/static/search/img/xinxi.png" /></a>
+                <div class="div">
+                    <a href="#">反馈</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    <!--仅显示有货-->
+    $("#showHasStock").click(function () {
+        let checked = $(this).prop("checked");
+        console.log(checked);
+        location.href=replaceParamVal(location.href,"hasStock",checked?1:0,false)
+    })
+
+    <!--价格区间-->
+    $("#skuPriceSearchBtn").click(function () {
+        var skuPriceFrom = $("#skuPriceFrom").val();
+        var skuPriceTo = $("#skuPriceTo").val();
+        location.href = replaceParamVal(location.href, "skuPrice", skuPriceFrom + "_" + skuPriceTo, false);
+    })
+
+    <!--排序-->
+    // $(".sort_a").click(function () {
+    //     //3 通过修改url排序
+    //     var sort = $(this).attr("sort");
+    //     sort = $(this).hasClass("desc") ? sort + "_desc" : sort + "_asc";
+    //     location.href=replaceParamVal(location.href,"sort",sort+"_desc",false)
+    //     // changeStyle(this);
+    //     return false;
+    // });
+    //
+    // function changeStyle(ele){
+    //     //1. 点击后清除兄弟按钮样式，并添加当前节点样式
+    //     $(".sort_a").css({"color": "#333","border-color": "#CCC","background": "#FFF"});
+    //     $(ele).css({"color": "#FFF","border-color": "#e4393c","background": "#e4393c"});
+    //     //2. 改变升降序符号
+    //     //2.1 清除兄弟节点符号和排序样式
+    //     $(".sort_a").each(function () {
+    //         $(this).removeClass("desc")
+    //         $(this).text($(this).text().replace("↑","").replace("↓",""))
+    //     })
+    //     //2.2 替换当前节点文本
+    //     var text= $(ele).text().replace("↑","").replace("↓","");
+    //     $(ele).toggleClass("desc");
+    //     if ($(ele).hasClass("desc")){
+    //         //替换文本
+    //         $(ele).text(text+"↓");
+    //     }else {
+    //         $(ele).text(text+"↑");
+    //     }
+    // }
+
+    $(".sort_a").click(function () {
+        // changeStyle(this);
+        $(this).toggleClass("desc");
+        let sort = $(this).attr("sort");
+        sort = $(this).hasClass("desc") ? sort + "_desc" : sort + "_asc";
+        location.href = replaceParamVal(location.href, "sort", sort,false);
+        return false;
+    });
+
+    function changeStyle(ele) {
+        // location.href = replaceParamVal(href, "pageNum", pn,flase);
+        // color: #333; border-color: #ccc; background: #fff
+        // color: #fff; border-color: #e4393c; background: #e4393c
+        $(".sort_a").css({"color": "#333", "border-color": "#ccc", "background": "#fff"});
+        $(".sort_a").each(function () {
+            let text = $(this).text().replace("↓", "").replace("↑", "");
+            $(this).text(text);
+        })
+
+        $(ele).css({"color": "#FFF", "border-color": "#e4393c", "background": "#e4393c"});
+        $(ele).toggleClass("desc");
+
+        if ($(ele).hasClass("desc")) {
+            let text = $(ele).text().replace("↓", "").replace("↑", "");
+            text = text + "↓";
+            $(ele).text(text);
+        } else {
+            let text = $(ele).text().replace("↓", "").replace("↑", "");
+            text = text + "↑";
+            $(ele).text(text);
+        }
+    };
+
+    <!--分页函数-->
+    $(".page_a").click(function () {
+        var pn=$(this).attr("pn");
+        location.href=replaceParamVal(location.href,"pageNum",pn,false);
+        console.log(replaceParamVal(location.href,"pageNum",pn,false))
+    })
+    <!--替换网址相关函数-->
+    <!--搜索框-->
+    function searchByKeyword() {
+        location.href = replaceParamVal(location.href,"keyword", $("#keyword_input").val(),false);
+    };
+
+    function searchProducts(name, value) {
+        //原來的页面
+        location.href = replaceParamVal(location.href,name,value,true)
+    };
+
+    /**
+     * @param url 目前的url
+     * @param paramName 需要替换的参数属性名
+     * @param replaceVal 需要替换的参数的新属性值
+     * @param forceAdd 该参数是否可以重复查询(attrs=1_3G:4G:5G&attrs=2_骁龙845&attrs=4_高清屏)
+     * @returns {string} 替换或添加后的url
+     */
+    function replaceParamVal(url, paramName, replaceVal,forceAdd) {
+        var oUrl = url.toString();
+        var nUrl;
+        if (oUrl.indexOf(paramName) != -1) {
+            if( forceAdd && oUrl.indexOf(paramName+"="+replaceVal)==-1) {
+                if (oUrl.indexOf("?") != -1) {
+                    nUrl = oUrl + "&" + paramName + "=" + replaceVal;
+                } else {
+                    nUrl = oUrl + "?" + paramName + "=" + replaceVal;
+                }
+            } else {
+                var re = eval('/(' + paramName + '=)([^&]*)/gi');
+                nUrl = oUrl.replace(re, paramName + '=' + replaceVal);
+            }
+        } else {
+            if (oUrl.indexOf("?") != -1) {
+                nUrl = oUrl + "&" + paramName + "=" + replaceVal;
+            } else {
+                nUrl = oUrl + "?" + paramName + "=" + replaceVal;
+            }
+        }
+        return nUrl;
+    };
+
+
+    $(".sl_ext a:nth-child(1)").hover(function(){
+        $(this).children("b").stop(true).animate({top:"3px"},50);
+        $(this).children("i").stop(true).animate({top:"-23px"},50)
+    },function(){
+        $(this).children("b").stop(true).animate({top:"24px"},50);
+        $(this).children("i").stop(true).animate({top:"3px"},50)
+    });
+    $(".sl_ext a:nth-child(2)").hover(function(){
+        $(this).children("span").stop(true).animate({top:"-1px"},100);
+        $(this).children("i").stop(true).animate({top:"-14px"},100).css({display:"none"})
+    },function(){
+        $(this).children("span").stop(true).animate({top:"14px"},100);
+        $(this).children("i").stop(true).animate({top:"-1px"},100).css({display:"block"})
+    });
+    $('.tab_im img').hover(function(){
+        var a=$(this).prop('src');
+        var index=$(this).parents('li').index();
+        $(this).parents('li').css('border','2px solid red').siblings('li').css('border','1px solid #ccc');
+        $(this).parents('ul').prev().find('img').prop('src',a);
+        $(this).parents('ul').siblings('.tab_JE').find('a').eq(list).css('display','block').siblings('a').css('display','none');
+        $(this).parents('ul').siblings('.tab_R').find('span').eq(list).css('display','block').siblings('span').css('display','none')
+    });
+
+    $(".JD_ipone_one").hover(function(){
+        $(this).children("div").css({display:"block"})
+    },function(){
+        $(this).children("div").css({display:"none"})
+    });
+
+    $("#tab>li").click(function() {
+        var i = $(this).index();
+        $("#container>div").hide().eq(i).show()
+    });
+    $(".dizhi_show").hover(function(){
+        $(".dizhi_con").css({display:"block"})
+    },function(){
+        $(".dizhi_con").css({display:"none"})
+    });
+    $(".dizhi_con").hover(function(){
+        $(this).css({display:"block"})
+    },function(){
+        $(this).css({display:"none"})
+    });
+    //显示隐藏
+    var $li = $(".JD_nav_logo>div:gt(3)").hide();
+      $('.JD_show span').click(function(){
+          if($li.is(':hidden')){
+              $li.show();
+              $(this).css({width:"86px"}).text('收起 ^');
+          }else{
+              $li.hide();
+              $('.JD_show span').css({width:"291px"}).text('更多选项（ CPU核数、网络、机身颜色 等）');
+          }
+          return false;
+      });
+
+
+
+    $(".rig_tab>div").hover(function(){
+        var i = $(this).index();
+        $(this).find('.ico').css({display:'block'}).stop(true).animate({top:"190px"},300)
+    },function(){
+        var i = $(this).index();
+        $(this).find('.ico').css({display:'none'}).stop(true).animate({top:"230px"})
+    });
+
+    $('.header_main_left>ul>li').hover(function() {
+        $(this).css({
+            background: "#f0f0f0"
+        }).find('.header_main_left_main').stop(true).fadeIn(300)
+    }, function() {
+        $(this).css({
+            background: "#fff"
+        }).find(".header_main_left_a").css({
+            color: "#000"
+        });
+        $(this).find('.header_main_left_main').stop(true).fadeOut(100)
+    });
+    $(".header_sj a").hover(function() {
+        $(this).css({
+            background: "#444"
+        })
+    }, function() {
+        $(this).css({
+            background: "#6e6568"
+        })
+    });
+
+
+    $(".nav_li1 a").hover(function(){
+        $(".header_main_left").stop(true).fadeIn()
+    },function(){
+        $(".header_main_left").stop(true).fadeOut()
+    });
+    $(".header_main_left").hover(function(){
+        $(this).stop(true).fadeIn()
+    },function(){
+        $(this).stop(true).fadeOut()
+    });
+
+
+    //右侧侧边栏
+    $(".header_bar_box ul li").hover(function() {
+        $(this).css({
+            background: "#7A6E6E"
+        }).children(".div").css({
+            display: "block"
+        }).stop(true).animate({
+            left: "-60px"
+        }, 300)
+    }, function() {
+        $(this).css({
+            background: "#7A6E6E"
+        }).children(".div").css({
+            display: "none"
+        }).stop(true).animate({
+            left: "0"
+        }, 300)
+    });
+
+
+    //底部
+    $(".footer_foot .p1 a").hover(function(){
+        $(this).css("color","#D70B1C")
+    },function(){
+        $(this).css("color","#727272")
+    });
+
+    $(".footer .footer_center ol li a").hover(function(){
+        $(this).css("color","#D70B1C")
+    },function(){
+        $(this).css("color","#727272")
+    })
+</script>
+</body>
+</html>

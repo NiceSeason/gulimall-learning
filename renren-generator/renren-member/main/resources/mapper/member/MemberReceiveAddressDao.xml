@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.member.dao.MemberReceiveAddressDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.member.entity.MemberReceiveAddressEntity" id="memberReceiveAddressMap">
+        <result property="id" column="id"/>
+        <result property="memberId" column="member_id"/>
+        <result property="name" column="name"/>
+        <result property="phone" column="phone"/>
+        <result property="postCode" column="post_code"/>
+        <result property="province" column="province"/>
+        <result property="city" column="city"/>
+        <result property="region" column="region"/>
+        <result property="detailAddress" column="detail_address"/>
+        <result property="areacode" column="areacode"/>
+        <result property="defaultStatus" column="default_status"/>
+    </resultMap>
+
+
+</mapper>

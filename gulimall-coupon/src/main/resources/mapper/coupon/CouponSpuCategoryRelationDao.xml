@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.coupon.dao.CouponSpuCategoryRelationDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.coupon.entity.CouponSpuCategoryRelationEntity" id="couponSpuCategoryRelationMap">
+        <result property="id" column="id"/>
+        <result property="couponId" column="coupon_id"/>
+        <result property="categoryId" column="category_id"/>
+        <result property="categoryName" column="category_name"/>
+    </resultMap>
+
+
+</mapper>

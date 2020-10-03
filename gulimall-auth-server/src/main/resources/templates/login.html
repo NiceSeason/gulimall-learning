@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="/static/login/JD_sass/JD1.css" />
+		<script src="/static/login/JD_js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<title>gulimall</title>
+	</head>
+	<body>
+		<!--顶部logo-->
+		<header>
+			<a href="/static/login/http://www.baidu.com"><img src="/static/login/JD_img/logo.jpg" /></a>
+			<p>欢迎登录</p>
+			<div class="top-1">
+				<img src="/static/login/JD_img/4de5019d2404d347897dee637895d02b_06.png" /><span>登录页面,调查问卷</span>
+			</div>
+		</header>
+
+		<div class="top-2">
+			<div class="top-2a">
+				<img src="/static/login/JD_img/4de5019d2404d347897dee637895d02b_11.png" />
+				<p>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！新版《<span>谷粒商城隐私政策</span>》已上线，将更有利于保护您的个人隐私。</p>
+			</div>
+		</div>
+
+		<!--大图-->
+		<div class="top-3">
+			<div class="img_1">
+				<img src="/static/login/JD_img/5731485aN1134b4f0.png" />
+			</div>
+			<div id="sign">
+				<div class="si_top">
+					<p>
+						<span>谷粒商城不会以任何理由要求您转账汇款，谨防诈骗。</span>
+					</p>
+				</div>
+				<div class="si_cen">
+					<h2 class="act btn1">扫码登录</h2>
+					<span>|</span>
+					<h2 class="btn1">账户登录</h2>
+				</div>
+				<div class="si_bom tab">
+					<img src="/static/login/JD_img/show.png" class="bom_1" />
+					<a href="/static/login/#"><img src="/static/login/JD_img/phone-orange.png" class="bom_2" /></a>
+					<h6>打开<span class="red">手机谷粒商城</span> 扫描二维码</h6>
+					<p>
+						<img src="/static/login/JD_img/4de5019d2404d347897dee637895d02b_15.png" />
+						<span><a href="/static/login/#">免输入</a></span>
+						<img src="/static/login/JD_img/4de5019d2404d347897dee637895d02b_17.png" />
+						<span><a href="/static/login/#">更快</a></span>
+						<img src="/static/login/JD_img/4de5019d2404d347897dee637895d02b_19.png" />
+						<span><a href="/static/login/#">更安全</a></span>
+					</p>
+				</div>
+				<form action="/login" method="post">
+					<div class="tips" style="color:red" th:text="${errors!=null?(#maps.containsKey(errors,'msg')?errors.msg:''):''}">
+					</div>
+					<div class="si_bom1 tab" style="display: none;">
+						<div class="error">
+							<div></div>
+							请输入账户名和密码
+						</div>
+						<ul>
+							<li class="top_1">
+								<img src="/static/login/JD_img/user_03.png" class="err_img1" />
+								<input name="loginAccount" type="text" placeholder=" 邮箱/用户名/已验证手机" class="user" />
+							</li>
+							<li>
+								<img src="/static/login/JD_img/user_06.png" class="err_img2" />
+								<input name="password" type="password" placeholder=" 密码" class="password" />
+							</li>
+							<li class="bri">
+								<a href="/static/login/">忘记密码</a>
+							</li>
+							<li class="ent"><button type="submit" class="btn2"><a class="a">登 &nbsp; &nbsp;录</a></button></li>
+						</ul>
+					</div>
+				</form>
+				<div class="si_out">
+					<ul>
+						<li>
+							<a href="https://api.weibo.com/oauth2/authorize?client_id=2144471074&response_type=code&redirect_uri=http://auth.gulimall.com/oauth2.0/weibo/success">
+								<img style="width: 50px;height: 18px;" src="/static/login/JD_img/weibo.png" />
+<!--								<span>微博</span>-->
+							</a>
+						</li>
+						<li class="f4"> | </li>
+						<li>
+							<a href="/static/login/">
+								<img src="/static/login/JD_img/weixin.png" />
+								<span>微信</span>
+							</a>
+						</li>
+					</ul>
+					<h5 class="rig">
+						<img src="/static/login/JD_img/4de5019d2404d347897dee637895d02b_25.png" />
+						<span><a href="/static/login/http://127.0.0.1:8020/JD/JD_%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2(1)/index.html?__hbt=1512049011905">立即注册</a></span>
+					</h5>
+				</div>
+			</div>
+		</div>
+
+
+		<!--底部-->
+		<footer>
+			<ul>
+				<li><a href="/static/login/#">关于我们</a></li>
+				<li class="little">|</li>
+				<li><a href="/static/login/#">联系我们</a></li>
+				<li class="little">|</li>
+				<li><a href="/static/login/#">人才招聘</a></li>
+				<li class="little">|</li>
+				<li><a href="/static/login/#">商家入驻</a></li>
+				<li class="little">|</li>
+				<li><a href="/static/login/#">广告服务</a></li>
+				<li class="little">|</li>
+				<li><a href="/static/login/#">手机谷粒商城</a></li>
+				<li class="little">|</li>
+				<li><a href="/static/login/#">友情链接</a></li>
+				<li class="little">|</li>
+				<li><a href="/static/login/#">销售联盟</a></li>
+				<li class="little">|</li>
+				<li><a href="/static/login/#">谷粒商城社区</a></li>
+				<li class="little">|</li>
+				<li><a href="/static/login/#">谷粒商城公益</a></li>
+				<li class="little">|</li>
+				<li><a href="/static/login/#">English Site</a></li>
+			</ul>
+			<span>Copyright &copy; 2004-2017 谷粒商城gulimall.com 版权所有</span>
+		</footer>
+
+	</body>
+	<script type="text/javascript">
+		var alDiv = document.getElementsByClassName('tab');
+		var alBtn = document.getElementsByTagName('h2');
+		alDiv[0].style.display = 'block';
+		var act = alBtn[0]
+		for (var i = 0; i < alBtn.length; i++) {
+			alBtn[i].indent = i;
+			alBtn[i].onclick = function() {
+				act.className = '';
+				alDiv[act.indent].style.display = 'none';
+				this.className = 'act'
+				alDiv[this.indent].style.display = 'block'
+				act = this
+			}
+		}
+
+		var btn2 = document.getElementsByClassName('btn2')[0];
+		var user = document.getElementsByClassName('user')[0];
+		var pass = document.getElementsByClassName('password')[0];
+		var err = document.getElementsByClassName('error')[0];
+		var err_img1 = document.getElementsByClassName('err_img1')[0];
+		var err_img2 = document.getElementsByClassName('err_img2')[0];
+
+		// btn2.onclick = function() {
+		// 	if (user.value == '' || pass.value == '') {
+		// 		err.style.display = 'block';
+		// 		user.style.border = '1px solid red';
+		// 		pass.style.border = '1px solid red';
+		// 		err_img1.src = 'JD_img/img11.png';
+		// 		err_img2.src = 'JD_img/img22.png';
+		// 	} else {
+		// 		var a = document.getElementsByClassName("a")[0].href = "http://www.baidu.com";
+		// 	}
+		// 	user.onfocus = function() {
+		// 		err_img1.src = 'JD_img/grow1.png';
+		// 		user.style.border = '1px solid #999';
+		// 	}
+		// 	pass.onfocus = function() {
+		// 		err_img2.src = 'JD_img/grow2.png';
+		// 		pass.style.border = '1px solid #999';
+		// 	}
+		// 	user.onblur = function() {
+		// 		err_img1.src = 'JD_img/img11.png';
+		// 		user.style.border = '1px solid red';
+		// 	}
+		// 	pass.onblur = function() {
+		// 		err_img2.src = 'JD_img/img22.png';
+		// 		pass.style.border = '1px solid red';
+		// 	}
+		// }
+	</script>
+</html>

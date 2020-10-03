@@ -1,0 +1,29 @@
+package ${package}.${moduleName}.entity;
+
+
+#if(${hasList})
+import java.util.List;
+#end
+
+import java.io.Serializable;
+import java.util.Date;
+import lombok.Data;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.annotation.Id;
+
+/**
+ * ${comments}
+ * 
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+@Data
+public class ${className}InnerEntity  {
+
+
+#foreach ($column in $columns)
+private #if($column.extra == "array")List<#end$column.attrType#if($column.extra == "array")>#end $column.attrname;
+#end
+
+}

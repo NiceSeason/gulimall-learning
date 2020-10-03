@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.coupon.dao.CouponHistoryDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.coupon.entity.CouponHistoryEntity" id="couponHistoryMap">
+        <result property="id" column="id"/>
+        <result property="couponId" column="coupon_id"/>
+        <result property="memberId" column="member_id"/>
+        <result property="memberNickName" column="member_nick_name"/>
+        <result property="getType" column="get_type"/>
+        <result property="createTime" column="create_time"/>
+        <result property="useType" column="use_type"/>
+        <result property="useTime" column="use_time"/>
+        <result property="orderId" column="order_id"/>
+        <result property="orderSn" column="order_sn"/>
+    </resultMap>
+
+
+</mapper>

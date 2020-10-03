@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.product.dao.CategoryBrandRelationDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.product.entity.CategoryBrandRelationEntity" id="categoryBrandRelationMap">
+        <result property="id" column="id"/>
+        <result property="brandId" column="brand_id"/>
+        <result property="catelogId" column="catelog_id"/>
+        <result property="brandName" column="brand_name"/>
+        <result property="catelogName" column="catelog_name"/>
+    </resultMap>
+    <update id="updateBrand">
+        UPDATE `pms_category_brand_relation` set brand_name=#{name} where brand_id=#{brandId};
+    </update>
+
+
+</mapper>

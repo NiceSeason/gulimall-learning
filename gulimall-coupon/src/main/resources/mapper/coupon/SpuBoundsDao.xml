@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.coupon.dao.SpuBoundsDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.coupon.entity.SpuBoundsEntity" id="spuBoundsMap">
+        <result property="id" column="id"/>
+        <result property="spuId" column="spu_id"/>
+        <result property="growBounds" column="grow_bounds"/>
+        <result property="buyBounds" column="buy_bounds"/>
+        <result property="work" column="work"/>
+    </resultMap>
+
+
+</mapper>

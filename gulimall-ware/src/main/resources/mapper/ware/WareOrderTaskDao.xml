@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.ware.dao.WareOrderTaskDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.ware.entity.WareOrderTaskEntity" id="wareOrderTaskMap">
+        <result property="id" column="id"/>
+        <result property="orderId" column="order_id"/>
+        <result property="orderSn" column="order_sn"/>
+        <result property="consignee" column="consignee"/>
+        <result property="consigneeTel" column="consignee_tel"/>
+        <result property="deliveryAddress" column="delivery_address"/>
+        <result property="orderComment" column="order_comment"/>
+        <result property="paymentWay" column="payment_way"/>
+        <result property="taskStatus" column="task_status"/>
+        <result property="orderBody" column="order_body"/>
+        <result property="trackingNo" column="tracking_no"/>
+        <result property="createTime" column="create_time"/>
+        <result property="wareId" column="ware_id"/>
+        <result property="taskComment" column="task_comment"/>
+    </resultMap>
+
+
+</mapper>

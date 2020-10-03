@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.order.dao.PaymentInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.order.entity.PaymentInfoEntity" id="paymentInfoMap">
+        <result property="id" column="id"/>
+        <result property="orderSn" column="order_sn"/>
+        <result property="orderId" column="order_id"/>
+        <result property="alipayTradeNo" column="alipay_trade_no"/>
+        <result property="totalAmount" column="total_amount"/>
+        <result property="subject" column="subject"/>
+        <result property="paymentStatus" column="payment_status"/>
+        <result property="createTime" column="create_time"/>
+        <result property="confirmTime" column="confirm_time"/>
+        <result property="callbackContent" column="callback_content"/>
+        <result property="callbackTime" column="callback_time"/>
+    </resultMap>
+
+
+</mapper>

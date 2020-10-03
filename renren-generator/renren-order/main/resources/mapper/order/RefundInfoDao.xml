@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.order.dao.RefundInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.order.entity.RefundInfoEntity" id="refundInfoMap">
+        <result property="id" column="id"/>
+        <result property="orderReturnId" column="order_return_id"/>
+        <result property="refund" column="refund"/>
+        <result property="refundSn" column="refund_sn"/>
+        <result property="refundStatus" column="refund_status"/>
+        <result property="refundChannel" column="refund_channel"/>
+        <result property="refundContent" column="refund_content"/>
+    </resultMap>
+
+
+</mapper>

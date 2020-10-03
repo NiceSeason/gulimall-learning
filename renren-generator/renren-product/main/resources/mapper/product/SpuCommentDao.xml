@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.product.dao.SpuCommentDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.product.entity.SpuCommentEntity" id="spuCommentMap">
+        <result property="id" column="id"/>
+        <result property="skuId" column="sku_id"/>
+        <result property="spuId" column="spu_id"/>
+        <result property="spuName" column="spu_name"/>
+        <result property="memberNickName" column="member_nick_name"/>
+        <result property="star" column="star"/>
+        <result property="memberIp" column="member_ip"/>
+        <result property="createTime" column="create_time"/>
+        <result property="showStatus" column="show_status"/>
+        <result property="spuAttributes" column="spu_attributes"/>
+        <result property="likesCount" column="likes_count"/>
+        <result property="replyCount" column="reply_count"/>
+        <result property="resources" column="resources"/>
+        <result property="content" column="content"/>
+        <result property="memberIcon" column="member_icon"/>
+        <result property="commentType" column="comment_type"/>
+    </resultMap>
+
+
+</mapper>

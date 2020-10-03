@@ -1,0 +1,56 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://47.110.152.217:3306/gulimall_pms
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      max-lifetime: 10000
+  #  application:
+#    name: gulimall-product
+  cloud:
+      nacos:
+        discovery:
+          server-addr: 47.110.152.217
+      # 文件上传秘钥
+      alicloud:
+        access-key: LTAI4G36rcBvn3uGH4RgW9QL
+        secret-key: 8hbKqxS9oA7AsVcdmLDKeCrlSyGpJb
+        oss:
+          endpoint: oss-cn-hangzhou.aliyuncs.com
+  thymeleaf:
+    cache: false
+  redis:
+    host: 192.168.56.102
+    port: 6379
+  cache:
+    type: redis
+    redis:
+      time-to-live: 3600000
+  session:
+    store-type: redis
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+server:
+  port: 10002
+  servlet:
+    session:
+      timeout: 30m
+
+logging:
+  level:
+    io.niceseason.gulimall.product.dao: error
+
+# 自定义线程池参数
+gulimall:
+  thread:
+    corePoolSize: 10
+    maxPoolSize: 20
+    keepAliveTime: 300

@@ -1,0 +1,15 @@
+server:
+  port: 12000
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.110.152.217
+  redis:
+    host: 192.168.56.102
+  session:
+    store-type: redis
+logging:
+  level:
+    io.niceseason.gulimall.search.service: debug

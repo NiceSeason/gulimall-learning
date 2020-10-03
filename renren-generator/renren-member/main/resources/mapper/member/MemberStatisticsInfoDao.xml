@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.member.dao.MemberStatisticsInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.member.entity.MemberStatisticsInfoEntity" id="memberStatisticsInfoMap">
+        <result property="id" column="id"/>
+        <result property="memberId" column="member_id"/>
+        <result property="consumeAmount" column="consume_amount"/>
+        <result property="couponAmount" column="coupon_amount"/>
+        <result property="orderCount" column="order_count"/>
+        <result property="couponCount" column="coupon_count"/>
+        <result property="commentCount" column="comment_count"/>
+        <result property="returnOrderCount" column="return_order_count"/>
+        <result property="loginCount" column="login_count"/>
+        <result property="attendCount" column="attend_count"/>
+        <result property="fansCount" column="fans_count"/>
+        <result property="collectProductCount" column="collect_product_count"/>
+        <result property="collectSubjectCount" column="collect_subject_count"/>
+        <result property="collectCommentCount" column="collect_comment_count"/>
+        <result property="inviteFriendCount" column="invite_friend_count"/>
+    </resultMap>
+
+
+</mapper>

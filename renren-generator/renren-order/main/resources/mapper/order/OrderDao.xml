@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.order.dao.OrderDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.order.entity.OrderEntity" id="orderMap">
+        <result property="id" column="id"/>
+        <result property="memberId" column="member_id"/>
+        <result property="orderSn" column="order_sn"/>
+        <result property="couponId" column="coupon_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="memberUsername" column="member_username"/>
+        <result property="totalAmount" column="total_amount"/>
+        <result property="payAmount" column="pay_amount"/>
+        <result property="freightAmount" column="freight_amount"/>
+        <result property="promotionAmount" column="promotion_amount"/>
+        <result property="integrationAmount" column="integration_amount"/>
+        <result property="couponAmount" column="coupon_amount"/>
+        <result property="discountAmount" column="discount_amount"/>
+        <result property="payType" column="pay_type"/>
+        <result property="sourceType" column="source_type"/>
+        <result property="status" column="status"/>
+        <result property="deliveryCompany" column="delivery_company"/>
+        <result property="deliverySn" column="delivery_sn"/>
+        <result property="autoConfirmDay" column="auto_confirm_day"/>
+        <result property="integration" column="integration"/>
+        <result property="growth" column="growth"/>
+        <result property="billType" column="bill_type"/>
+        <result property="billHeader" column="bill_header"/>
+        <result property="billContent" column="bill_content"/>
+        <result property="billReceiverPhone" column="bill_receiver_phone"/>
+        <result property="billReceiverEmail" column="bill_receiver_email"/>
+        <result property="receiverName" column="receiver_name"/>
+        <result property="receiverPhone" column="receiver_phone"/>
+        <result property="receiverPostCode" column="receiver_post_code"/>
+        <result property="receiverProvince" column="receiver_province"/>
+        <result property="receiverCity" column="receiver_city"/>
+        <result property="receiverRegion" column="receiver_region"/>
+        <result property="receiverDetailAddress" column="receiver_detail_address"/>
+        <result property="note" column="note"/>
+        <result property="confirmStatus" column="confirm_status"/>
+        <result property="deleteStatus" column="delete_status"/>
+        <result property="useIntegration" column="use_integration"/>
+        <result property="paymentTime" column="payment_time"/>
+        <result property="deliveryTime" column="delivery_time"/>
+        <result property="receiveTime" column="receive_time"/>
+        <result property="commentTime" column="comment_time"/>
+        <result property="modifyTime" column="modify_time"/>
+    </resultMap>
+
+
+</mapper>

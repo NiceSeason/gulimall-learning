@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.niceseason.gulimall.member.dao.MemberLevelDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.niceseason.gulimall.member.entity.MemberLevelEntity" id="memberLevelMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="growthPoint" column="growth_point"/>
+        <result property="defaultStatus" column="default_status"/>
+        <result property="freeFreightPoint" column="free_freight_point"/>
+        <result property="commentGrowthPoint" column="comment_growth_point"/>
+        <result property="priviledgeFreeFreight" column="priviledge_free_freight"/>
+        <result property="priviledgeMemberPrice" column="priviledge_member_price"/>
+        <result property="priviledgeBirthday" column="priviledge_birthday"/>
+        <result property="note" column="note"/>
+    </resultMap>
+
+
+</mapper>

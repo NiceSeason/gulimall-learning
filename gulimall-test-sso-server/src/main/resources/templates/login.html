@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<form action="">
+    用户名<input type="text" name="username">
+    密码<input type="password" name="password">
+    <input type="hidden" th:value="${redirect_url}" name="redirect_url">
+    <input type="submit" value="点击登录">
+</form>
