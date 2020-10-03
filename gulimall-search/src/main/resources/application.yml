@@ -5,7 +5,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 47.110.152.217
+        server-addr: #
   redis:
     host: 192.168.56.102
   session:

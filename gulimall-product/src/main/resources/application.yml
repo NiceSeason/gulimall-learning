@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://47.110.152.217:3306/gulimall_pms
+    url: jdbc:mysql://#:3306/gulimall_pms
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       max-lifetime: 10000
@@ -11,7 +11,7 @@ spring:
   cloud:
       nacos:
         discovery:
-          server-addr: 47.110.152.217
+          server-addr: #
       # 文件上传秘钥
       alicloud:
         access-key: LTAI4G36rcBvn3uGH4RgW9QL
