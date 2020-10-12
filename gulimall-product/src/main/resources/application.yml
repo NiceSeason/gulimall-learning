@@ -14,8 +14,8 @@ spring:
           server-addr: #
       # 文件上传秘钥
       alicloud:
-        access-key: LTAI4G36rcBvn3uGH4RgW9QL
-        secret-key: 8hbKqxS9oA7AsVcdmLDKeCrlSyGpJb
+        access-key: #
+        secret-key: #
         oss:
           endpoint: oss-cn-hangzhou.aliyuncs.com
   thymeleaf:
