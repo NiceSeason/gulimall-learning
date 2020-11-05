@@ -7,7 +7,7 @@ spring:
   session:
     store-type: redis
   rabbitmq:
-    host: 47.110.152.217
+    host: #
     username: niceseason
     password: mo19960729
     listener:
@@ -16,7 +16,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 47.110.152.217
+        server-addr: #
     sentinel:
       transport:
         dashboard: localhost:8080

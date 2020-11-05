@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://47.110.152.217:3306/gulimall_pms
+    url: jdbc:mysql://#:3306/gulimall_pms
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       max-lifetime: 50000
@@ -11,11 +11,11 @@ spring:
   cloud:
       nacos:
         discovery:
-          server-addr: 47.110.152.217
+          server-addr: #
       # 文件上传秘钥
       alicloud:
-        access-key: LTAI4G36rcBvn3uGH4RgW9QL
-        secret-key: 8hbKqxS9oA7AsVcdmLDKeCrlSyGpJb
+        access-key: #
+        secret-key: #
         oss:
           endpoint: oss-cn-hangzhou.aliyuncs.com
       sentinel:
@@ -69,6 +69,7 @@ gulimall:
     corePoolSize: 10
     maxPoolSize: 20
     keepAliveTime: 300
+<<<<<<< HEAD
 management:
   endpoints:
     web:
@@ -77,3 +78,5 @@ management:
 feign:
   sentinel:
     enabled: true
+=======
+>>>>>>> 9e4857d66f652e179bc55f579092d12e93ed463a

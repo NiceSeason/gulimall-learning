@@ -11,10 +11,10 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 47.110.152.217:8848
+        server-addr: #:8848
     alicloud:
-      access-key: LTAI4G36rcBvn3uGH4RgW9QL
-      secret-key:  8hbKqxS9oA7AsVcdmLDKeCrlSyGpJb
+      access-key: #
+      secret-key:  #
       oss:
         bucket: gulimall-niceseason
         endpoint: oss-cn-hangzhou.aliyuncs.com
@@ -22,7 +22,7 @@ spring:
       sms:
         host: http://dingxin.market.alicloudapi.com
         path: /dx/sendSms
-        appcode: 0a118f8b1b3d43d5b10732a6caad9e0d
+        appcode: #
     sentinel:
       transport:
         dashboard: localhost:8080

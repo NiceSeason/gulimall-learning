@@ -4,7 +4,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 47.110.152.217
+        server-addr: #
     sentinel:
       transport:
         dashboard: localhost:8080
