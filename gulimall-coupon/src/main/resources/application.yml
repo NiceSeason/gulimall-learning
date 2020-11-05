@@ -12,7 +12,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: #
+        server-addr: #nacos注册中心地址
     sentinel:
       transport:
         dashboard: localhost:8080

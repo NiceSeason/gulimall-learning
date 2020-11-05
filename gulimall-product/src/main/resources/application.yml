@@ -11,7 +11,7 @@ spring:
   cloud:
       nacos:
         discovery:
-          server-addr: #
+          server-addr: #nacos注册中心地址
       # 文件上传秘钥
       alicloud:
         access-key: #

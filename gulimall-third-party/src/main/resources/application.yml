@@ -11,7 +11,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: #:8848
+        server-addr: #nacos注册中心地址:8848
     alicloud:
       access-key: #
       secret-key:  #

@@ -16,10 +16,10 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: #:8848
+        server-addr: #nacos注册中心地址:8848
       config:
         name: renren-fast
-        server-addr: #
+        server-addr: #nacos注册中心地址
         namespace: 0a4ed40b-20a1-4f2c-a741-49279a883ffb
     sentinel:
       transport:
