@@ -1,8 +1,11 @@
 package io.niceseason.gulimall.product.service.impl;
 
+import com.alibaba.fastjson.TypeReference;
+import io.niceseason.common.utils.R;
 import io.niceseason.gulimall.product.entity.SkuImagesEntity;
 import io.niceseason.gulimall.product.entity.SpuInfoDescEntity;
 import io.niceseason.gulimall.product.entity.SpuInfoEntity;
+import io.niceseason.gulimall.product.feign.SeckillFeignService;
 import io.niceseason.gulimall.product.service.*;
 import io.niceseason.gulimall.product.vo.SeckillSkuVo;
 import io.niceseason.gulimall.product.vo.SkuItemSaleAttrVo;
@@ -43,6 +46,9 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoDao, SkuInfoEntity> i
 
     @Autowired
     private ProductAttrValueService productAttrValueService;
+
+    @Autowired
+    private SeckillFeignService seckillFeignService;
 
     @Autowired
     private ThreadPoolExecutor executor;
@@ -138,11 +144,23 @@ public class SkuInfoServiceImpl extends ServiceImpl<SkuInfoDao, SkuInfoEntity> i
             skuItemVo.setGroupAttrs(spuItemAttrGroupVos);
         }, executor);
 
-        //TODO 6、秒杀商品的优惠信息
+        //6、秒杀商品的优惠信息
+        CompletableFuture<Void> seckFuture = CompletableFuture.runAsync(() -> {
+            R r = seckillFeignService.getSeckillSkuInfo(skuId);
+            if (r.getCode() == 0) {
+                SeckillSkuVo seckillSkuVo = r.getData(new TypeReference<SeckillSkuVo>() {
+                });
+                long current = System.currentTimeMillis();
+                //如果返回结果不为空且活动未过期，设置秒杀信息
+                if (seckillSkuVo != null&&current<seckillSkuVo.getEndTime()) {
+                    skuItemVo.setSeckillSkuVo(seckillSkuVo);
+                }
+            }
+        }, executor);
 
         //等待所有任务执行完成
         try {
-            CompletableFuture.allOf(imageFuture, saleFuture, descFuture, attrFuture).get();
+            CompletableFuture.allOf(imageFuture, saleFuture, descFuture, attrFuture,seckFuture).get();
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {

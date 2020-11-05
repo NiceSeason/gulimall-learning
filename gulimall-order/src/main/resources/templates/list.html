@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>谷粒商城订单</title>
+  <link rel="stylesheet" href="/static/order/list/css/index.css">
+  <style media="screen">
+    * {
+      font-family: "微软雅黑";
+    }
+  </style>
+</head>
+
+<body>
+  <div id="nav">
+    <nav>
+     
+      <div class="myjd">
+        <h3>我的谷粒商城</h3>
+        <button onclick="location.href='http://gulimall.com'">返回谷粒商城首页</button>
+      </div>
+      <ul class="nav_ul">
+        <li>首页</li>
+        <li class="li hover">账户设置<i class="ul_i"></i>
+          <ol>
+            <li>个人信息</li>
+            <li>账户安全</li>
+            <li>我的尺码</li>
+            <li>账号绑定</li>
+            <li>收货地址</li>
+            <li>用药人信息</li>
+            <li>分享绑定</li>
+            <li>邮件订阅</li>
+            <li>应用授权</li>
+            <li>快捷支付</li>
+            <li>增票资质</li>
+            <li>企业发票</li>
+            <li>采购需求单</li>
+          </ol>
+        </li>
+        <li class="li">社区<i class="ul_i"></i>
+          <ol>
+            <li>个人主页</li>
+            <li>我的活动</li>
+            <li>我的圈子</li>
+            <li>我的帖子</li>
+          </ol>
+        </li>
+        <li>消息</li>
+      </ul>
+      <div class="right">
+        <div class="btn">
+          <input type="text" placeholder="空调"><button>搜索</button>
+        </div>
+        <ul class="shop">
+          <li><i class="shop_che"></i>我的购物车 >
+            <ol>
+              <li>
+                <img src="/static/order/list/img/shop.png" alt="">
+                <div>购物车中还没有商品，赶紧选购吧</div>
+                <div style="clear:both;"></div>
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+      <div style="clear:both;"></div>
+    </nav>
+
+  </div>
+  <div style="clear:both;"></div>
+  <div id="big">
+    <div id="bigLeft">
+      <ul>
+        <h5>订单中心</h5>
+        <li style="color:#E4393C;font-weight:800;">我的订单</li>
+        <li>我的活动</li>
+        <li>评价晒单</li>
+        <li>我的常购商品<img src="/static/order/list/img/new.png"></li>
+        <li>购物助手</li>
+      </ul>
+      <ul>
+        <h5>关注中心</h5>
+        <li>关注的商品</li>
+        <li>关注的店铺</li>
+        <li>关注的专辑</li>
+        <li>收藏的内容<img src="/static/order/list/img/new.png"></li>
+        <li>关注的活动</li>
+        <li>浏览历史</li>
+      </ul>
+      <ul>
+        <h5>资产中心</h5>
+        <li>小金库</li>
+        <li>谷粒商城白条</li>
+        <li>领货码</li>
+        <li>余额</li>
+        <li>优惠券</li>
+        <li>礼品卡</li>
+        <li>京豆</li>
+        <li>谷粒商城钢镚<img src="/static/order/list/img/new.png"></li>
+      </ul>
+      <ul>
+        <h5>特色业务</h5>
+        <li>我的营业厅</li>
+        <li>谷粒商城通信</li>
+        <li>定期购</li>
+        <li>我的回收单</li>
+        <li>节能补贴</li>
+        <li>医药服务</li>
+        <li>流量加油站</li>
+        <li>黄金托管</li>
+        <li>视频教育订单</li>
+        <li>海外房产预约</li>
+        <li>我的全球购</li>
+        <li>装修服务</li>
+      </ul>
+      <ul>
+        <h5>客户服务</h5>
+        <li>返修退换货</li>
+        <li>价格保护</li>
+        <li>意见建议</li>
+        <li>我的问答</li>
+        <li>购买咨询</li>
+        <li>交易纠纷</li>
+        <li>谷粒商城维修</li>
+        <li>上门预约服务</li>
+        <li>我的发票</li>
+        <li>举报中心</li>
+      </ul>
+      <ul>
+        <h5>设置</h5>
+        <li>个人信息</li>
+        <li>收货地址</li>
+        <li><img src="/static/order/list/img/59126ae3N1b306e2c.jpg" alt=""></li>
+      </ul>
+    </div>
+    <div id="bigRight">
+      <div class="myOrder">
+        <p>我的订单</p>
+      </div>
+
+
+      <div class="allBig">
+        <div class="allOrder">
+          <ul class="allOrderTop">
+            <li>
+              <ol>
+                <li>全部订单</li>
+                <li>待付款</li>
+                <li>待收货</li>
+                <li>待评价</li>
+                <div style="clear:both;"></div>
+              </ol>
+            </li>
+            <li class="allOrderTopLi">我的常购商品</li>
+            <li class="allOrderTopLi">好货清仓</li>
+            <li class="allOrderTopLastLi">
+              <span>订单回收站</span>
+              <div>
+                <input type="text" placeholder="商品名称/商品编号/订单号"><button class="search"></button><button calss="gao">高级<i></i></button>
+              </div>
+            </li>
+            <div class="clear:both;"></div>
+          </ul>
+
+        </div>
+        <div class="details">
+          <ul class="detailsUl">
+            <div class="detailsUlDiv">
+              <li class="detailsLiok detailsLi">近三个月订单<i class="allBig_i"></i>
+                <ol>
+                  <li>近三个月订单</li>
+                  <li>今年内订单</li>
+                  <li>今年内订单</li>
+                  <li>2016年订单</li>
+                  <li>2015年订单</li>
+                  <li>2014年订单</li>
+                  <li>2014年以前订单</li>
+                </ol>
+              </li>
+              <li class="detailsLi">订单详情</li>
+              <div style="clear:both;"></div>
+            </div>
+
+            <li class="detailsLi1">收货人</li>
+            <li class="detailsLi1">金额</li>
+            <li class="detailsLi1 detailsLiok">全部状态<i class="allBig_i"></i>
+              <ol>
+                <li>全部状态</li>
+                <li>等待付款</li>
+                <li>等待收货</li>
+                <li>已完成</li>
+                <li>已取消</li>
+              </ol>
+            </li>
+            <li class="detailsLi1">操作</li>
+            <div style="clear:both;"></div>
+          </ul>
+        </div>
+        <table class="table" th:each="order: ${pageUtil.list}">
+          <tr>
+            <td colspan="7" style="background:#F7F7F7" >
+              <span style="color:#AAAAAA" th:text="${order.createTime}">2017-12-09 20:50:10</span>
+              <span><ruby style="color:#AAAAAA" th:text="${order.orderSn}">订单号:</ruby> 70207298274</span>
+              <span>谷粒商城<i class="table_i"></i></span>
+              <i class="table_i5 isShow"></i>
+            </td>
+          </tr>
+          <tr class="tr" th:each="item: ${order.items}">
+            <td colspan="3">
+              <img style="height: 60px; width: 60px;" src="/static/order/list/img/ding.jpg" th:src="${item.skuPic}" alt="" class="img">
+              <div>
+                <p th:text="${item.skuName}">MUXIWEIERPU皮手套男冬季加绒保暖户外骑<br />
+                车开车触摸屏全指防寒全指手套 黑色 均码</p>
+                <div><i class="table_i4"></i>找搭配</div>
+              </div>
+              <div style="margin-left:15px;">x[[${item.skuQuantity}]]</div>
+              <div style="clear:both"></div>
+            </td>
+            <td>[[${order.receiverName}]]<i><i class="table_i1"></i></i></td>
+            <td style="padding-left:10px;color:#AAAAB1;">
+              <p style="margin-bottom:5px;">总额 ￥[[${#numbers.formatDecimal(order.payAmount,3,2)}]]</p>
+              <hr style="width:90%;">
+              <p>在线支付</p>
+            </td>
+            <td>
+              <ul>
+                <li style="color:#71B247;" th:if="${order.status==0}">待付款</li>
+                <li style="color:#71B247;" th:if="${order.status==1}">已付款</li>
+                <li style="color:#71B247;" th:if="${order.status==2}">已发货</li>
+                <li style="color:#71B247;" th:if="${order.status==3}">已完成</li>
+                <li style="color:#71B247;" th:if="${order.status==4}">已取消</li>
+                <li style="color:#71B247;" th:if="${order.status==5}">售后中</li>
+                <li style="color:#71B247;" th:if="${order.status==6}">售后完成</li>
+                <li style="margin:4px 0;" class="hide"><i class="table_i2"></i>跟踪<i class="table_i3"></i>
+                    <div class="hi">
+                      <div class="p-tit">
+                        普通快递   运单号:390085324974
+                      </div>
+                      <div class="hideList">
+                        <ul>
+                          <li>
+                            [北京市] 在北京昌平区南口公司进行签收扫描,快件已被拍照(您
+                            的快件已签收,感谢您使用韵达快递)签收
+                          </li>
+                          <li>
+                            [北京市] 在北京昌平区南口公司进行签收扫描,快件已被拍照(您
+                            的快件已签收,感谢您使用韵达快递)签收
+                          </li>
+                          <li>
+                            [北京昌平区南口公司] 在北京昌平区南口公司进行派件扫描
+                          </li>
+                          <li>
+                            [北京市] 在北京昌平区南口公司进行派件扫描;派送业务员:业务员;联系电话:17319268636
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </li>
+                <li class="tdLi">订单详情</li>
+              </ul>
+            </td>
+            <td>
+              <button>确认收货</button>
+              <p style="margin:4px 0; ">取消订单</p>
+              <p>催单</p>
+            </td>
+          </tr>
+        </table>
+
+
+        <div class="order_btm">
+          <div>
+            <button>上一页</button>
+            <span>1</span>
+            <button>下一页</button>
+          </div>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+
+      <div class="buy">
+        <div class="buy_top">
+          <div>买什么</div>
+          <div>查看更多商品专辑</div>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="buy_btm">
+          <dl>
+            <dt>
+              <div>最适合冬季的茶</div>
+              <p>不入魔不成仙</p>
+            </dt>
+            <dd class="ab_goods">
+              <div><img src="/static/order/list/img/bu.jpg" alt=""></div>
+              <div>
+                <img src="/static/order/list/img/1xb.jpg" alt="">
+                <img src="/static/order/list/img/1xb1.jpg" alt="">
+                <div>32</div>
+              </div>
+            </dd>
+            <div style="clear:both;"></div>
+            <dd class="ab_operate">
+              <ul>
+                <li class="guanzhu"><i class="buy_btm_i1 buy_btm_i"></i>关注 5</li>
+                <li class="zhan"><i class="buy_btm_i2 buy_btm_i0"></i>赞 5</li>
+                <div style="clear:both;"></div>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>用新奇搞怪献给那些有趣的灵魂</div>
+              <p>小太阳骥少</p>
+            </dt>
+            <dd class="ab_goods">
+              <div><img src="/static/order/list/img/bu1.jpg" alt=""></div>
+              <div>
+                <img src="/static/order/list/img/2xb.jpg" alt="">
+                <img src="/static/order/list/img/2xb1.jpg" alt="">
+                <div>17</div>
+              </div>
+            </dd>
+            <div style="clear:both;"></div>
+            <dd class="ab_operate">
+              <ul>
+                <li class="guanzhu"><i class="buy_btm_i1 buy_btm_i"></i>关注 5</li>
+                <li class="zhan"><i class="buy_btm_i2 buy_btm_i0"></i>赞 5</li>
+                <div style="clear:both;"></div>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>流感来了，如何做好防护？</div>
+              <p>gulimall-guliyuan</p>
+            </dt>
+            <dd class="ab_goods">
+              <div><img src="/static/order/list/img/bu2.jpg" alt=""></div>
+              <div>
+                <img src="/static/order/list/img/3xb.jpg" alt="">
+                <img src="/static/order/list/img/3xb1.jpg" alt="">
+                <div>23</div>
+              </div>
+            </dd>
+            <div style="clear:both;"></div>
+            <dd class="ab_operate">
+              <ul>
+                <li class="guanzhu"><i class="buy_btm_i1 buy_btm_i"></i>关注 2</li>
+                <li class="zhan"><i class="buy_btm_i2 buy_btm_i0"></i>赞 5</li>
+                <div style="clear:both;"></div>
+              </ul>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <div>流感来了，如何做好防护？</div>
+              <p>gulimall-guliyuan</p>
+            </dt>
+            <dd class="ab_goods">
+              <div><img src="/static/order/list/img/bu3.jpg" alt=""></div>
+              <div>
+                <img src="/static/order/list/img/xb.jpg" alt="">
+                <img src="/static/order/list/img/xb1.jpg" alt="">
+                <div>23</div>
+              </div>
+            </dd>
+            <div style="clear:both;"></div>
+            <dd class="ab_operate">
+              <ul>
+                <li class="guanzhu"><i class="buy_btm_i1 buy_btm_i"></i>关注 4</li>
+                <li class="zhan"><i class="buy_btm_i2 buy_btm_i0"></i>赞 11</li>
+                <div style="clear:both;"></div>
+              </ul>
+            </dd>
+          </dl>
+          <div style="clear:both;"></div>
+        </div>
+      </div>
+
+      <div class="mySwiper">
+        <div class="mySwiper_like">
+          <div class="left">猜你喜欢</div>
+          <ol>
+            <li class="liList">1</li>
+            <li class="liList">2</li>
+            <li class="liList">3</li>
+            <div style="clear:both"></div>
+          </ol>
+          <div style="clear:both"></div>
+        </div>
+        <ul>
+          <li style="display:block;">
+            <dl>
+              <dt><img src="/static/order/list/image/lunbo.jpg" alt=""></dt>
+              <dd>
+                <div>花王 (Merries) 妙而舒 纸尿裤</div>
+                <div>大号 L54片 尿不湿（9-14千克）</div>
+                <p>¥83.90</p>
+                <span>(已有363668人评价)</span>
+              </dd>
+            </dl>
+            <dl>
+              <dt><img src="/static/order/list/image/lunbo1.jpg" alt=""></dt>
+              <dd>
+                <div>三只松鼠 肉干肉脯 休闲零食</div>
+                <div>猪肉脯自然片150g/袋子</div>
+                <p>¥26.90</p>
+                <span>(已有448374人评价)</span>
+              </dd>
+            </dl>
+            <dl>
+              <dt><img src="/static/order/list/image/lunbo2.jpg" alt=""></dt>
+              <dd>
+                <div>满减不止5折三只松鼠_小贱牛</div>
+                <div>板筋120gx1袋休闲零食特产</div>
+                <p>¥22.80</p>
+                <span>(已有169149人评价)</span>
+              </dd>
+            </dl>
+            <dl>
+              <dt><img src="/static/order/list/image/lunbo3.jpg" alt=""></dt>
+              <dd>
+
+
+                <div>良品铺子鸭脖子 甜辣味真空小包装</div>
+                <div>香辣卤味零食休闲小吃熟食190g</div>
+                <p>¥21.90</p>
+                <span>(已有208040人评价)</span>
+              </dd>
+            </dl>
+            <dl>
+              <dt><img src="/static/order/list/image/lunbo4.jpg" alt=""></dt>
+              <dd>
+                <div>欧莱雅（LOREAL）男士控油</div>
+                <div>（男士洗面奶 收缩毛孔 去黑头）</div>
+                <p>¥39.00</p>
+                <span>(已有604670人评价)</span>
+              </dd>
+            </dl>
+            <div style="clear:both;"></div>
+          </li>
+          <li>
+            <dl>
+              <dt><img src="/static/order/list/image/live.jpg" alt=""></dt>
+              <dd>
+                <div>花王 (Merries) 妙而舒 纸尿裤</div>
+                <div>大号 L54片 尿不湿（9-14千克）</div>
+                <p>¥83.90</p>
+                <span>(已有363668人评价)</span>
+              </dd>
+            </dl>
+            <dl>
+              <dt><img src="/static/order/list/image/live1.jpg" alt=""></dt>
+              <dd>
+                <div>三只松鼠 肉干肉脯 休闲零食</div>
+                <div>猪肉脯自然片150g/袋子</div>
+                <p>¥26.90</p>
+                <span>(已有448374人评价)</span>
+              </dd>
+            </dl>
+            <dl>
+              <dt><img src="/static/order/list/image/live2.jpg" alt=""></dt>
+              <dd>
+                <div>满减不止5折三只松鼠_小贱牛</div>
+                <div>板筋120gx1袋休闲零食特产</div>
+                <p>¥22.80</p>
+                <span>(已有169149人评价)</span>
+              </dd>
+            </dl>
+            <dl>
+              <dt><img src="/static/order/list/image/live3.jpg" alt=""></dt>
+              <dd>
+
+
+                <div>良品铺子鸭脖子 甜辣味真空小包装</div>
+                <div>香辣卤味零食休闲小吃熟食190g</div>
+                <p>¥21.90</p>
+                <span>(已有208040人评价)</span>
+              </dd>
+            </dl>
+            <dl>
+              <dt><img src="/static/order/list/image/live4.jpg" alt=""></dt>
+              <dd>
+                <div>欧莱雅（LOREAL）男士控油</div>
+                <div>（男士洗面奶 收缩毛孔 去黑头）</div>
+                <p>¥39.00</p>
+                <span>(已有604670人评价)</span>
+              </dd>
+            </dl>
+            <div style="clear:both;"></div>
+          </li>
+          <li>
+            <dl>
+              <dt><img src="/static/order/list/image/lunbo5.jpg" alt=""></dt>
+              <dd>
+                <div>花王 (Merries) 妙而舒 纸尿裤</div>
+                <div>大号 L54片 尿不湿（9-14千克）</div>
+                <p>¥83.90</p>
+                <span>(已有363668人评价)</span>
+              </dd>
+            </dl>
+            <dl>
+              <dt><img src="/static/order/list/image/lunbo6.jpg" alt=""></dt>
+              <dd>
+                <div>三只松鼠 肉干肉脯 休闲零食</div>
+                <div>猪肉脯自然片150g/袋子</div>
+                <p>¥26.90</p>
+                <span>(已有448374人评价)</span>
+              </dd>
+            </dl>
+            <div style="clear:both;"></div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="logo">
+        <img src="/static/order/list/img/datu.jpg" alt="">
+        <img src="/static/order/list/img/datu1.jpg" alt="">
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+  </div>
+
+
+
+  <div class="footer">
+    <div class="top">
+      <ul>
+          <li class="item fore1">
+              <i></i>
+              品类齐全，轻松购物
+          </li>
+          <li class="item fore2">
+              <i></i>
+              多仓直发，极速配送
+          </li>
+          <li class="item fore3">
+              <i></i>
+              正品行货，精致服务
+
+
+          </li>
+          <li class="item fore4">
+              <i></i>
+              天天低价，畅选无忧
+
+
+          </li>
+          <div style="clear:both;"></div>
+      </ul>
+    </div>
+    <div class="wrap">
+      <div class="wrap1">
+          <div class="wrap2">
+             <dl>
+                 <dt>购物指南</dt>
+                 <dd>购物流程</dd>
+                 <dd>会员介绍</dd>
+                 <dd>生活旅行/团购</dd>
+                 <dd>常见问题</dd>
+                 <dd>大家电</dd>
+                 <dd>联系客服</dd>
+             </dl>
+              <dl>
+                  <dt>配送方式</dt>
+                  <dd>上门自提</dd>
+                  <dd>211限时达</dd>
+                  <dd>配送服务查询</dd>
+                  <dd>配送费收取标准</dd>
+                  <dd>海外配送</dd>
+
+              </dl>
+              <dl>
+                  <dt>支付方式</dt>
+                  <dd>货到付款</dd>
+                  <dd>在线支付</dd>
+                  <dd>分期付款</dd>
+                  <dd>邮局汇款</dd>
+                  <dd>公司转账</dd>
+              </dl>
+              <dl>
+              <dt>公司转账</dt>
+              <dd>售后政策</dd>
+              <dd>价格保护</dd>
+              <dd>退款说明</dd>
+              <dd>返修/退换货</dd>
+              <dd>取消订单</dd>
+
+
+          </dl>
+              <dl>
+                  <dt>特色服务</dt>
+                  <dd>夺宝岛</dd>
+                  <dd>DIY装机</dd>
+                  <dd>延保服务</dd>
+                  <dd>谷粒商城E卡</dd>
+                  <dd>谷粒商城通信</dd>
+                  <dd>谷粒商城gulimall+</dd>
+              </dl>
+          </div>
+      </div>
+    </div>
+    <p class="p1">
+        <a href="/static/order/list/#">关于我们</a>
+        <a href="/static/order/list/#">联系我们</a>
+        <a href="/static/order/list/#">联系客服</a>
+        <a href="/static/order/list/#">合作招商</a>
+        <a href="/static/order/list/#">合作招商</a>
+        <a href="/static/order/list/#">营销中心</a>
+        <a href="/static/order/list/#" style="width:80px;">手机谷粒商城</a>
+        <a href="/static/order/list/#">友情链接</a>
+        <a href="/static/order/list/#">销售联盟</a>
+        <a href="/static/order/list/#" style="width:80px;">谷粒商城社区</a>
+        <a href="/static/order/list/#">风险监测</a>
+        <a href="/static/order/list/#">隐私政策</a>
+        <a href="/static/order/list/#" style="width:80px;">谷粒商城公益</a>
+        <a href="/static/order/list/#" style="width:80px;">English Site</a>
+        <a href="/static/order/list/#" style="border-right: none">Contact Us</a>
+    </p>
+    <p class="p2">
+        <a href="/static/order/list/#">京公网安备 11000002000088号</a>
+        <a href="/static/order/list/#">京ICP证070359号</a>
+        <a href="/static/order/list/#">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>
+        <a href="/static/order/list/#">新出发京零 字第大120007号</a>
+    </p>
+    <p class="p3">
+        <a href="/static/order/list/#">互联网出版许可证编号新出网证(京)字150号</a>
+        <a href="/static/order/list/#">出版物经营许可证</a>
+        <a href="/static/order/list/#">网络文化经营许可证京网文[2014]2148-348号</a>
+        <a href="/static/order/list/#">违法和不良信息举报电话：4006561155</a>
+    </p>
+    <p class="p4">
+        <a href="/static/order/list/#">Copyright © 2004 - 2017  谷粒商城gulimall.com 版权所有</a>
+        <a href="/static/order/list/#">消费者维权热线：4006067733</a>
+        <a href="/static/order/list/#">经营证照</a>
+    </p>
+    <p class="p5">
+        <a href="/static/order/list/#">谷粒商城旗下网站：谷粒商城钱包</a>
+        <a href="/static/order/list/#">谷粒商城云</a>
+
+    </p>
+    <p class="img">
+        <span class="span icon1"></span>
+        <span class="span icon2"></span>
+        <span class="span icon3"></span>
+        <span class="span icon4"></span>
+        <span class="span icon5"></span>
+        <span class="span icon6"></span>
+    </p>
+    <div style="clear: both"></div>
+  </div>
+  <div class="fixed">
+    
+    <div class="teSe">
+      <ul>
+        <li class="test_li1">
+          <ol>
+            <div></div>
+            <li>宽带</li>
+            <li>我的旅行订单</li>
+            <li>夺宝箱</li>
+            <li>我的定期送</li>
+            <li>我的竞拍保证金</li>
+            <li>谷粒商城白条</li>
+            <li>谷粒商城回收</li>
+            <li>装机大师</li>
+            <li>黄金托管业务</li>
+          </ol>
+        </li>
+        <li class="test_li2"></li>
+        <li><a href="/static/order/list/#" class="test_li3"></a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script src="/static/order/list/js/jquery-3.1.1.min.js"></script>
+<script src="/static/order/list/js/index.js"></script>
+
+</html>

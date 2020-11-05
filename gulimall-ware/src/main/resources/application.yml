@@ -1,24 +1,48 @@
-#spring:
-#  datasource:
-#    username: root
-#    password: root
-#    url: jdbc:mysql://#:3306/gulimall_wms
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#  application:
-#    name: gulimall-ware
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: #
-#
-#mybatis-plus:
-#  mapper-locations: classpath:/mapper/**/*.xml
-#  global-config:
-#    db-config:
-#      id-type: auto
-#
-#server:
-#  port: 11000
 spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://47.110.152.217:3306/gulimall_wms
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: gulimall-ware
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.110.152.217
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+  rabbitmq:
+    host: 47.110.152.217
+    username: niceseason
+    password: mo19960729
+    listener:
+      simple:
+        acknowledge-mode: manual
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
+  zipkin:
+    base-url: http://localhost:9411
+    sender:
+      type: web
+    discovery-client-enabled: false
+  #采样取值介于 0到1之间，1则表示全部收集
+  sleuth:
+    sampler:
+      probability: 1
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+
+server:
+  port: 11001
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

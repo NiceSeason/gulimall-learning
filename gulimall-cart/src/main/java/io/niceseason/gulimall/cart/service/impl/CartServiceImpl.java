@@ -97,14 +97,14 @@ public class CartServiceImpl implements CartService {
         CartVo cartVo = new CartVo();
         UserInfoTo userInfoTo = CartInterceptor.threadLocal.get();
         //1 用户未登录，直接通过user-key获取临时购物车
-        List<CartItemVo> tempCart = getCartByKey(CartConstant.CART_PREFIX + userInfoTo.getUserKey());
+        List<CartItemVo> tempCart = getCartByKey(userInfoTo.getUserKey());
         if (StringUtils.isEmpty(userInfoTo.getUserId())) {
             List<CartItemVo> cartItemVos = tempCart;
             cartVo.setItems(cartItemVos);
         }else {
             //2 用户登录
             //2.1 查询userId对应的购物车
-            List<CartItemVo> userCart = getCartByKey(CartConstant.CART_PREFIX + userInfoTo.getUserId());
+            List<CartItemVo> userCart = getCartByKey(userInfoTo.getUserId().toString());
             //2.2 查询user-key对应的临时购物车，并和用户购物车合并
             if (tempCart!=null&&tempCart.size()>0){
                 BoundHashOperations<String, Object, Object> ops = redisTemplate.boundHashOps(CartConstant.CART_PREFIX + userInfoTo.getUserId());
@@ -146,8 +146,15 @@ public class CartServiceImpl implements CartService {
         ops.delete(skuId.toString());
     }
 
+    @Override
+    public List<CartItemVo> getCheckedItems() {
+        UserInfoTo userInfoTo = CartInterceptor.threadLocal.get();
+        List<CartItemVo> cartByKey = getCartByKey(userInfoTo.getUserId().toString());
+        return cartByKey.stream().filter(CartItemVo::getCheck).collect(Collectors.toList());
+    }
+
     private List<CartItemVo> getCartByKey(String userKey) {
-        BoundHashOperations<String, Object, Object> ops = redisTemplate.boundHashOps(userKey);
+        BoundHashOperations<String, Object, Object> ops = redisTemplate.boundHashOps(CartConstant.CART_PREFIX+userKey);
 
         List<Object> values = ops.values();
         if (values != null && values.size() > 0) {

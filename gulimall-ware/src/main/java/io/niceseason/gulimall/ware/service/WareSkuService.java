@@ -2,8 +2,11 @@ package io.niceseason.gulimall.ware.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import io.niceseason.common.to.SkuHasStockVo;
+import io.niceseason.common.to.mq.OrderTo;
+import io.niceseason.common.to.mq.StockLockedTo;
 import io.niceseason.common.utils.PageUtils;
 import io.niceseason.gulimall.ware.entity.WareSkuEntity;
+import io.niceseason.gulimall.ware.vo.WareSkuLockVo;
 
 import java.util.List;
 import java.util.Map;
@@ -22,5 +25,11 @@ public interface WareSkuService extends IService<WareSkuEntity> {
     void addStock(Long skuId, Long wareId, Integer skuNum);
 
     List<SkuHasStockVo> getSkuHasStocks(List<Long> ids);
+
+    Boolean orderLockStock(WareSkuLockVo lockVo);
+
+    void unlock(StockLockedTo stockLockedTo);
+
+    void unlock(OrderTo orderTo);
 }
 

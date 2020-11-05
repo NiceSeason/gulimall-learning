@@ -1,4 +1,13 @@
 spring:
+  zipkin:
+    base-url: http://localhost:9411
+    sender:
+      type: web
+    discovery-client-enabled: false
+  #采样取值介于 0到1之间，1则表示全部收集
+  sleuth:
+    sampler:
+      probability: 1
   cloud:
     gateway:
       routes:
@@ -35,11 +44,19 @@ spring:
           filters:
             - RewritePath=/api/(?<segment>/?.*),/$\{segment}
 
-        #将路径为Path=/api/member/**转发至会员服务
+        #将路径为Path=/api/ware/**转发至仓库服务
         - id: gulimall-ware
           uri: lb://gulimall-ware
           predicates:
             - Path=/api/ware/**
+          filters:
+            - RewritePath=/api/(?<segment>/?.*),/$\{segment}
+
+        #将路径为Path=/api/coupon/**转发至优惠服务
+        - id: gulimall-coupon
+          uri: lb://gulimall-coupon
+          predicates:
+            - Path=/api/coupon/**
           filters:
             - RewritePath=/api/(?<segment>/?.*),/$\{segment}
 
@@ -70,11 +87,32 @@ spring:
           predicates:
             - Host=cart.gulimall.com
 
-        #将主机地址为search.gulimall.com转发至gulimall-search
+        #将主机地址为order.gulimall.com转发至gulimall-order
+        - id: gulimall_order_host
+          uri: lb://gulimall-order
+          predicates:
+            - Host=order.gulimall.com
+
+        #将主机地址为seckill.gulimall.com转发至gulimall-seckill
+        - id: gulimall_seckill_host
+          uri: lb://gulimall-seckill
+          predicates:
+            - Host=seckill.gulimall.com
+
+        #将主机地址为**.gulimall.com转发至gulimall-product
         - id: gulimall_host
           uri: lb://gulimall-product
           predicates:
             - Host=**.gulimall.com
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 
 

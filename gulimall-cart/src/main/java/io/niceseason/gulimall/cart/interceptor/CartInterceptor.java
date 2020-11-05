@@ -29,11 +29,13 @@ public class CartInterceptor implements HandlerInterceptor {
         }
 
         Cookie[] cookies = request.getCookies();
-        for (Cookie cookie : cookies) {
-            //2 如果浏览器中已经有user-Key，则直接设置
-            if (cookie.getName().equals(CartConstant.TEMP_USER_COOKIE_NAME)) {
-                userInfoTo.setUserKey(cookie.getValue());
-                userInfoTo.setTempUser(true);
+        if (cookies != null && cookies.length > 0) {
+            for (Cookie cookie : cookies) {
+                //2 如果浏览器中已经有user-Key，则直接设置
+                if (cookie.getName().equals(CartConstant.TEMP_USER_COOKIE_NAME)) {
+                    userInfoTo.setUserKey(cookie.getValue());
+                    userInfoTo.setTempUser(true);
+                }
             }
         }
 

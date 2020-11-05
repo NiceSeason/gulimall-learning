@@ -1,6 +1,8 @@
 package io.niceseason.gulimall.product.web;
 
+import io.niceseason.common.utils.R;
 import io.niceseason.gulimall.product.entity.CategoryEntity;
+import io.niceseason.gulimall.product.feign.SeckillFeignService;
 import io.niceseason.gulimall.product.service.CategoryService;
 import io.niceseason.gulimall.product.vo.Catalog2Vo;
 import org.redisson.api.*;
@@ -10,6 +12,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -26,6 +29,9 @@ public class IndexController {
 
     @Autowired
     private StringRedisTemplate redisTemplate;
+
+    @Autowired
+    private SeckillFeignService seckillFeignService;
 
     @GetMapping({"/", "index.html"})
     public String getIndex(Model model) {
@@ -117,4 +123,11 @@ public class IndexController {
         latch.countDown();
         return "门栓被放开1";
     }
+
+    @ResponseBody
+    @GetMapping("/getSeckillSkuInfo/{skuId}")
+    public R getSeckillSkuInfo(@PathVariable("skuId") Long skuId) {
+        return seckillFeignService.getSeckillSkuInfo(skuId);
+    }
+
 }

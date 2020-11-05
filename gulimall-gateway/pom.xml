@@ -20,6 +20,12 @@
     </properties>
 
     <dependencies>
+        <!-- 引入sentinel网关限流 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-alibaba-sentinel-gateway</artifactId>
+            <version>2.1.0.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>io.niceseason</groupId>
             <artifactId>gulimall-common</artifactId>

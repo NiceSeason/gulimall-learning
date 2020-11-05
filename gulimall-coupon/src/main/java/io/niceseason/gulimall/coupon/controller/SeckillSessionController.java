@@ -1,6 +1,7 @@
 package io.niceseason.gulimall.coupon.controller;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,13 @@ import io.niceseason.common.utils.R;
 public class SeckillSessionController {
     @Autowired
     private SeckillSessionService seckillSessionService;
+
+
+    @RequestMapping("/getSeckillSessionsIn3Days")
+    public R getSeckillSessionsIn3Days() {
+        List<SeckillSessionEntity> seckillSessionEntities=seckillSessionService.getSeckillSessionsIn3Days();
+        return R.ok().setData(seckillSessionEntities);
+    }
 
     /**
      * 列表

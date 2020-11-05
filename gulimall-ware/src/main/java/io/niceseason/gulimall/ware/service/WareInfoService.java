@@ -3,6 +3,7 @@ package io.niceseason.gulimall.ware.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import io.niceseason.common.utils.PageUtils;
 import io.niceseason.gulimall.ware.entity.WareInfoEntity;
+import io.niceseason.gulimall.ware.vo.FareVo;
 
 import java.util.Map;
 
@@ -16,5 +17,7 @@ import java.util.Map;
 public interface WareInfoService extends IService<WareInfoEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
+    FareVo getFare(Long addrId);
 }
 

@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8"/>
+	<script src="/static/order/confirm/js/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/order/confirm/css/JD2.css"/>
+
+	<title>订单结算页</title>
+</head>
+
+<body>
+<!--顶部-->
+<header>
+	<div class="header">
+		<ul class="header-left">
+			<li>
+				<img src="/static/order/confirm/img/header_1.png"/>
+				<a href="http://gulimall.com">谷粒学院首页</a>
+			</li>
+			<li class="header-l-2">
+				<i class="fa fa-map-marker" style="color: #5C5452;"></i>
+				<a href="/static/order/confirm/">北京</a>
+				<div class="header-l-d">
+
+					<ul>
+						<li><a href="/static/order/confirm/" style="background: red; color: white;">北京</a></li>
+						<li><a href="/static/order/confirm/">山西</a></li>
+						<li><a href="/static/order/confirm/">内蒙古</a></li>
+						<li><a href="/static/order/confirm/">福建</a></li>
+						<li><a href="/static/order/confirm/">江西</a></li>
+						<li><a href="/static/order/confirm/">西藏</a></li>
+						<li><a href="/static/order/confirm/">新疆</a></li>
+					</ul>
+					<ul>
+						<li><a href="/static/order/confirm/">上海</a></li>
+						<li><a href="/static/order/confirm/">河南</a></li>
+						<li><a href="/static/order/confirm/">江苏</a></li>
+						<li><a href="/static/order/confirm/">湖北</a></li>
+						<li><a href="/static/order/confirm/">四川</a></li>
+						<li><a href="/static/order/confirm/">陕西</a></li>
+						<li><a href="/static/order/confirm/">港澳</a></li>
+					</ul>
+					<ul>
+						<li><a href="/static/order/confirm/">天津</a></li>
+						<li><a href="/static/order/confirm/">辽宁</a></li>
+						<li><a href="/static/order/confirm/">山东</a></li>
+						<li><a href="/static/order/confirm/">湖南</a></li>
+						<li><a href="/static/order/confirm/">海南</a></li>
+						<li><a href="/static/order/confirm/">甘肃</a></li>
+						<li><a href="/static/order/confirm/">台湾</a></li>
+					</ul>
+					<ul>
+						<li><a href="/static/order/confirm/">重庆</a></li>
+						<li><a href="/static/order/confirm/">吉林</a></li>
+						<li><a href="/static/order/confirm/">安徽</a></li>
+						<li><a href="/static/order/confirm/">广东</a></li>
+						<li><a href="/static/order/confirm/">贵州</a></li>
+						<li><a href="/static/order/confirm/">青岛</a></li>
+						<li><a href="/static/order/confirm/">钓鱼岛</a></li>
+					</ul>
+					<ul>
+						<li><a href="/static/order/confirm/">河北</a></li>
+						<li><a href="/static/order/confirm/">黑龙江</a></li>
+						<li><a href="/static/order/confirm/">浙江</a></li>
+						<li><a href="/static/order/confirm/">广西</a></li>
+						<li><a href="/static/order/confirm/">云南</a></li>
+						<li><a href="/static/order/confirm/">宁夏</a></li>
+						<li><a href="/static/order/confirm/">海外</a></li>
+					</ul>
+
+
+				</div>
+			</li>
+
+		</ul>
+		<ul class="header-right">
+			<li>[[${session.loginUser.nickname}]]<img src="/static/order/confirm/img/03.png"
+													  style="margin-bottom: 0px;margin-left3: 3px;"/><img
+					src="/static/order/confirm/img/06.png"/></li>
+			<li>|</li>
+			<li class="spacer"></li>
+			<li><a href="http://member.gulimall.com/memberOrder.html">我的订单</a></li>
+			<li class="spacer"></li>
+			<li>
+				<a href="/static/order/confirm/">我的谷粒学院</a>
+				<i class="fa fa-angle-down"></i>
+				<div class="header-r-1 aa header-r-11">
+					<div>
+						<ol>
+							<dd><a href="/static/order/confirm/">待处理订单</a></dd>
+							<dd><a href="/static/order/confirm/">返修退换货</a></dd>
+							<dd><a href="/static/order/confirm/">降价商品</a></dd>
+
+						</ol>
+						<ol>
+							<dd><a href="/static/order/confirm/">消息</a></dd>
+							<dd><a href="/static/order/confirm/">我的问答</a></dd>
+							<dd><a href="/static/order/confirm/">我的关注</a></dd>
+
+						</ol>
+
+					</div>
+					<div>
+						<ol>
+							<dd><a href="/static/order/confirm/">我的京豆</a></dd>
+							<dd><a href="/static/order/confirm/">我的白条</a></dd>
+						</ol>
+						<ol>
+							<dd><a href="/static/order/confirm/">我的优惠劵</a></dd>
+							<dd><a href="/static/order/confirm/">我的理财</a></dd>
+						</ol>
+
+					</div>
+					<div>
+						<h4><a href="/static/order/confirm/">我的足迹</a><a href="/static/order/confirm/">更多 ></a></h4>
+						<a href="/static/order/confirm/"><img src="/static/order/confirm/image/59ae02fcN529cc4a1.jpg"/></a>
+						<a href="/static/order/confirm/"><img src="/static/order/confirm/image/59ce706fN6f3f2a4a.jpg"/></a>
+						<a href="/static/order/confirm/"><img src="/static/order/confirm/image/57b191f2N15993cbb.jpg"/></a>
+						<a href="/static/order/confirm/"><img src="/static/order/confirm/image/58ff269fN7b7e087b.jpg"/></a>
+
+					</div>
+				</div>
+
+			</li>
+			<li class="spacer"></li>
+			<li><a href="/static/order/confirm/">谷粒学院会员</a></li>
+			<li class="spacer"></li>
+			<li><a href="/static/order/confirm/">企业采购</a></li>
+			<li class="spacer"></li>
+			<li>
+				<a href="/static/order/confirm/">客户服务</a>
+				<i class="fa fa-angle-down"></i>
+				<div class="header-r-1 aa header-r-2">
+					<div>
+						<h4>客户</h4>
+						<ol>
+
+							<dd><a href="/static/order/confirm/">帮助中心</a></dd>
+							<dd><a href="/static/order/confirm/">在线客服</a></dd>
+							<dd><a href="/static/order/confirm/">电话客服</a></dd>
+							<dd><a href="/static/order/confirm/">金融咨询</a></dd>
+						</ol>
+						<ol>
+
+							<dd><a href="/static/order/confirm/">售后服务</a></dd>
+							<dd><a href="/static/order/confirm/">意见建议</a></dd>
+							<dd><a href="/static/order/confirm/">客服邮箱</a></dd>
+							<dd><a href="/static/order/confirm/">售全球客服</a></dd>
+						</ol>
+					</div>
+					<div>
+						<h4>商户</h4>
+						<ol>
+
+							<dd><a href="/static/order/confirm/">合作招商</a></dd>
+							<dd><a href="/static/order/confirm/">商家后台</a></dd>
+							<dd><a href="/static/order/confirm/">商家帮助</a></dd>
+						</ol>
+						<ol>
+
+							<dd><a href="/static/order/confirm/">学习中心</a></dd>
+							<dd><a href="/static/order/confirm/">京麦工作台</a></dd>
+							<dd><a href="/static/order/confirm/">规则平台</a></dd>
+						</ol>
+					</div>
+				</div>
+
+			</li>
+			<li class="spacer"></li>
+			<li>
+				<a href="/static/order/confirm/">网址导航</a>
+				<i class="fa fa-angle-down"></i>
+				<div class="header-r-1 aa header-r-3">
+					<div>
+						<h4>特色主题</h4>
+						<ol>
+							<dd><a href="/static/order/confirm/">谷粒学院试用</a></dd>
+							<dd><a href="/static/order/confirm/">国际站</a></dd>
+							<dd><a href="/static/order/confirm/">买什么</a></dd>
+							<dd><a href="/static/order/confirm/">0元评测</a></dd>
+							<dd><a href="/static/order/confirm/">优惠劵</a></dd>
+							<dd><a href="/static/order/confirm/">印尼站</a></dd>
+							<dd><a href="/static/order/confirm/">陪伴计划</a></dd>
+						</ol>
+						<ol>
+							<dd><a href="/static/order/confirm/">谷粒学院金融</a></dd>
+							<dd><a href="/static/order/confirm/">谷粒学院会员</a></dd>
+							<dd><a href="/static/order/confirm/">俄语站</a></dd>
+							<dd><a href="/static/order/confirm/">定期送</a></dd>
+							<dd><a href="/static/order/confirm/">秒杀</a></dd>
+							<dd><a href="/static/order/confirm/">谷粒学院金融科技</a></dd>
+							<dd><a href="/static/order/confirm/">出海招商</a></dd>
+						</ol>
+						<ol>
+							<dd><a href="/static/order/confirm/">全球售</a></dd>
+							<dd><a href="/static/order/confirm/">谷粒学院预售</a></dd>
+							<dd><a href="/static/order/confirm/">装机大师</a></dd>
+							<dd><a href="/static/order/confirm/">港澳售</a></dd>
+							<dd><a href="/static/order/confirm/">闪购</a></dd>
+							<dd><a href="/static/order/confirm/">In货推荐</a></dd>
+						</ol>
+
+					</div>
+
+					<div>
+						<h4>行业推荐</h4>
+						<ol>
+							<dd><a href="/static/order/confirm/">手机</a></dd>
+							<dd><a href="/static/order/confirm/">玩3C</a></dd>
+							<dd><a href="/static/order/confirm/">家用电器</a></dd>
+							<dd><a href="/static/order/confirm/">服装城</a></dd>
+							<dd><a href="/static/order/confirm/">家装城</a></dd>
+							<dd><a href="/static/order/confirm/">食品</a></dd>
+							<dd><a href="/static/order/confirm/">农资频道</a></dd>
+							<dd><a href="/static/order/confirm/">图书</a></dd>
+
+						</ol>
+						<ol>
+							<dd><a href="/static/order/confirm/">智能数码</a></dd>
+							<dd><a href="/static/order/confirm/">电脑办公</a></dd>
+							<dd><a href="/static/order/confirm/">谷粒学院智能</a></dd>
+							<dd><a href="/static/order/confirm/">美妆馆</a></dd>
+							<dd><a href="/static/order/confirm/">母婴</a></dd>
+							<dd><a href="/static/order/confirm/">运动户外</a></dd>
+							<dd><a href="/static/order/confirm/">整车</a></dd>
+						</ol>
+					</div>
+
+
+					<div>
+						<h4>生活服务</h4>
+						<ol>
+							<dd><a href="/static/order/confirm/">谷粒学院众筹</a></dd>
+							<dd><a href="/static/order/confirm/">谷粒学院金融App</a></dd>
+							<dd><a href="/static/order/confirm/">理财</a></dd>
+							<dd><a href="/static/order/confirm/">话费</a></dd>
+							<dd><a href="/static/order/confirm/">彩票</a></dd>
+							<dd><a href="/static/order/confirm/">机票酒店</a></dd>
+							<dd><a href="/static/order/confirm/">酒店到家</a></dd>
+							<dd><a href="/static/order/confirm/">游戏</a></dd>
+
+						</ol>
+						<ol>
+							<dd><a href="/static/order/confirm/">白条</a></dd>
+							<dd><a href="/static/order/confirm/">谷粒学院小金库</a></dd>
+							<dd><a href="/static/order/confirm/">智能家电</a></dd>
+							<dd><a href="/static/order/confirm/">水电煤</a></dd>
+							<dd><a href="/static/order/confirm/">旅行</a></dd>
+							<dd><a href="/static/order/confirm/">电影票</a></dd>
+							<dd><a href="/static/order/confirm/">谷粒学院众测</a></dd>
+						</ol>
+					</div>
+
+
+					<div>
+						<h4>更多精选</h4>
+						<ol>
+							<dd><a href="/static/order/confirm/">合作招商</a></dd>
+							<dd><a href="/static/order/confirm/">谷粒学院E卡</a></dd>
+							<dd><a href="/static/order/confirm/">服务市场</a></dd>
+							<dd><a href="/static/order/confirm/">乡村招募</a></dd>
+							<dd><a href="/static/order/confirm/">京友邦</a></dd>
+							<dd><a href="/static/order/confirm/">智能社区</a></dd>
+							<dd><a href="/static/order/confirm/">知识产权维权</a></dd>
+
+
+						</ol>
+						<ol>
+							<dd><a href="/static/order/confirm/">谷粒学院通信</a></dd>
+							<dd><a href="/static/order/confirm/">企业采购</a></dd>
+							<dd><a href="/static/order/confirm/">办公生活馆</a></dd>
+							<dd><a href="/static/order/confirm/">校园加盟</a></dd>
+							<dd><a href="/static/order/confirm/">谷粒学院社区</a></dd>
+							<dd><a href="/static/order/confirm/">游戏社区</a></dd>
+						</ol>
+					</div>
+				</div>
+
+			</li>
+			<li class="spacer"></li>
+			<li class="header-r-4"><a href="/static/order/confirm/">手机谷粒学院</a>
+				<div class="aa h-r-1">
+
+					<div>
+						<div class="h-r-1img">
+							<img src="/static/order/confirm/img/59a51bf6Nb8e478cc.png"/>
+						</div>
+						<h4><a href="/static/order/confirm/">手机谷粒学院</a></h4>
+						<p>新人专享大礼</p>
+						<div class="h-r-1img2">
+							<a href="/static/order/confirm/"><img
+									src="/static/order/confirm/img/8104b36ae6b72043ae838599d36d007d.png" alt=""/></a>
+							<a href="/static/order/confirm/"><img
+									src="/static/order/confirm/img/c0935b2c6504a5419e6ee507a5381bbe.png"/></a>
+							<a href="/static/order/confirm/"><img
+									src="/static/order/confirm/img/a64b429ebf83d2459a0a73830f4ad4c4.png"/></a>
+						</div>
+					</div>
+					<div>
+						<div class="h-r-1img">
+							<img src="/static/order/confirm/img/5874a54dNcec29924.jpg"/>
+						</div>
+						<h4><a href="/static/order/confirm/">关注谷粒学院微信</a></h4>
+						<p>微信扫一扫关注新粉最高180元惊喜礼包</p>
+						<!--<div class="h-r-1img2">
+                            <a href="/static/order/confirm/"><img src="/static/order/confirm/image/8104b36ae6b72043ae838599d36d007d.png" alt="" /></a>
+                            <a href="/static/order/confirm/"><img src="/static/order/confirm/image/c0935b2c6504a5419e6ee507a5381bbe.png"/></a>
+                            <a href="/static/order/confirm/"><img src="/static/order/confirm/image/a64b429ebf83d2459a0a73830f4ad4c4.png"/></a>
+                        </div>-->
+					</div>
+					<div>
+						<div class="h-r-1img">
+							<img src="/static/order/confirm/img/5874a555Ne8192324.jpg"/>
+						</div>
+						<h4><a href="/static/order/confirm/">谷粒学院金融客户端</a></h4>
+						<p>新人专享大礼</p>
+						<div class="h-r-1img2">
+							<a href="/static/order/confirm/"><img
+									src="/static/order/confirm/img/8104b36ae6b72043ae838599d36d007d.png" alt=""/></a>
+							<a href="/static/order/confirm/"><img
+									src="/static/order/confirm/img/c0935b2c6504a5419e6ee507a5381bbe.png"/></a>
+							<a href="/static/order/confirm/"><img
+									src="/static/order/confirm/img/a64b429ebf83d2459a0a73830f4ad4c4.png"/></a>
+						</div>
+					</div>
+
+				</div>
+
+
+			</li>
+
+
+		</ul>
+		<div style="clear: both;"></div>
+	</div>
+
+
+</header>
+
+
+<!--<nav>-->
+<!--<ul>-->
+<!--<li><img src="/static/order/confirm/img/01.png" />谷粒学院首页</li>-->
+<!--<li class="in"><img src="/static/order/confirm/img/02.png" />北京-->
+<!--</li>-->
+<!--<li>尚硅谷<img src="/static/order/confirm/img/03.png" style="margin-bottom: -7px;margin-left: 3px;" /><img src="/static/order/confirm/img/06.png" /></li>-->
+<!--<li>|</li>-->
+<!--<li>我的订单</li>-->
+<!--<li>|</li>-->
+<!--<li>我的谷粒学院<img src="/static/order/confirm/img/06.png" style="margin-bottom: -4px;margin-left: 3px;" /></li>-->
+<!--<li>|</li>-->
+<!--<li>谷粒学院会员</li>-->
+<!--<li>|</li>-->
+<!--<li>企业采购</li>-->
+<!--<li>|</li>-->
+<!--<li>客户服务<img src="/static/order/confirm/img/06.png" style="margin-bottom: -4px;margin-left: 3px;" />-->
+
+<!--<ol class="ol">-->
+<!--<li>-->
+<!--<h4>客户</h4>-->
+<!--</li>-->
+<!--<li>-->
+<!--<p class="z">帮助中心</p>-->
+<!--<p class="y">售后服务</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<p class="z">在线客服</p>-->
+<!--<p class="y">意见建议</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<p class="z">电话客服</p>-->
+<!--<p class="y">客服邮箱</p>-->
+<!--</li>-->
+<!--<li class="li">-->
+<!--<p class="z">金融资讯</p>-->
+<!--<p class="y">售全球客服</p>-->
+<!--</li>-->
+<!--<li class="li1">-->
+<!--<h4>商户</h4>-->
+<!--</li>-->
+<!--<li>-->
+<!--<p class="z">合作招商</p>-->
+<!--<p class="y">学习中心</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<p class="z">商家后台</p>-->
+<!--<p class="y">京麦工作台</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<p class="z">商家帮助</p>-->
+<!--<p class="y">规则平台</p>-->
+<!--</li>-->
+<!--</ol>-->
+<!--<ol class="ol">-->
+<!--<li>-->
+<!--<h4>客户</h4>-->
+<!--</li>-->
+<!--<li>-->
+<!--<p class="z">帮助中心</p>-->
+<!--<p class="y">售后服务</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<p class="z">在线客服</p>-->
+<!--<p class="y">意见建议</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<p class="z">电话客服</p>-->
+<!--<p class="y">客服邮箱</p>-->
+<!--</li>-->
+<!--<li class="li">-->
+<!--<p class="z">金融资讯</p>-->
+<!--<p class="y">售全球客服</p>-->
+<!--</li>-->
+<!--<li class="li1">-->
+<!--<h4>商户</h4>-->
+<!--</li>-->
+<!--<li>-->
+<!--<p class="z">合作招商</p>-->
+<!--<p class="y">学习中心</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<p class="z">商家后台</p>-->
+<!--<p class="y">京麦工作台</p>-->
+<!--</li>-->
+<!--<li>-->
+<!--<p class="z">商家帮助</p>-->
+<!--<p class="y">规则平台</p>-->
+<!--</li>-->
+<!--</ol>-->
+
+
+<!--</li>-->
+<!--<li>|</li>-->
+<!--<li>网站导航<img src="/static/order/confirm/img/06.png" style="margin-bottom: -4px;margin-left: 3px;" /></li>-->
+<!--<li>|</li>-->
+<!--<li>手机谷粒学院</li>-->
+<!--</ul>-->
+<!--</nav>-->
+
+<!--logo图片-->
+<div class="top-1">
+	<img src="/static/order/confirm/img/logo1.jpg" class="img1"/><span>结算页</span>
+	<!--右侧绿色-->
+	<img src="/static/order/confirm/img/08.png" class="img2"/>
+</div>
+
+<!--主体部分-->
+<!--<p class="p1">填写并核对订单信息</p>-->
+<!--<div class="section">-->
+<!--&lt;!&ndash;收货人信息&ndash;&gt;-->
+<!--<div class="top-2">-->
+<!--<span>收货人信息</span>-->
+<!--<span>新增收货地址</span>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;地址&ndash;&gt;-->
+<!--<div class="top-3">-->
+<!--<p>家里</p><span>齐天大圣  北京市  昌平区城区晨曦小区-16号楼 吉利大学  150****2245</span>-->
+<!--</div>-->
+<!--<p class="p2">更多地址︾</p>-->
+<!--<hr class="hh1" />-->
+<!--&lt;!&ndash;********************************************************************************************&ndash;&gt;-->
+<!--&lt;!&ndash;谷粒学院自提&ndash;&gt;-->
+<!--<div class="top-4">-->
+<!--<p>谷粒学院自提</p>-->
+<!--<p>省运费·无续重·随时取</p>-->
+<!--<p>详情</p>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;地址&ndash;&gt;-->
+<!--<div class="top-5">-->
+<!--<p>北京昌平区</p><span>北京市  昌平区城区晨曦小区-16号楼 吉利大学  齐天大圣  150****2245</span><img src="/static/order/confirm/img/09.png" /><span>距收货人0米</span>-->
+<!--<p class="p3">距离最近</p><span>修改自提点</span>-->
+<!--</div>-->
+<!--<hr class="hh1" />-->
+
+<!--&lt;!&ndash;支付方式&ndash;&gt;-->
+<!--<h4 class="h4">支付方式</h4>-->
+<!--<div class="top-6">-->
+<!--<p>货到付款</p>-->
+<!--<p><span>惠</span>在线支付</p>-->
+<!--</div>-->
+<!--&lt;!&ndash;送货清单&ndash;&gt;-->
+<!--<h4 class="h4" style="margin-top: 5px;">送货清单</h4>-->
+<!--<div class="top_1">-->
+<!--<div class="to_left">-->
+<!--<h5>配送方式<span><img src="/static/order/confirm/img/i_03.png"/> 对应商品</span></h5>-->
+<!--<div class="box">-->
+<!--谷粒学院快递-->
+<!--</div>-->
+<!--<p class="biao">-->
+<!--<span class="til">标 准 达 ：</span>-->
+<!--<span class="con">预计 12月16日[今天] 15:00-19:00 送达</span>-->
+<!--<a href="/static/order/confirm/#">修改</a>-->
+<!--</p>-->
+<!--<div class="updata-1">-->
+<!--<img src="/static/order/confirm/img/im_06.png" />-->
+<!--<span>京准达 标准达</span>-->
+<!--<span style="color: black;"> 配送服务全面升级</span>-->
+<!--</div>-->
+<!--<hr />-->
+<!--<p class="tui">-->
+<!--<span class="til">退换无忧：</span>-->
+<!--<span class="con">-->
+<!--<input type="checkbox" />-->
+<!--自签收后7天内退货，15天内换<span> ￥ 0.50</span><br />-->
+<!--<span class="nul">货，</span>可享1次上门取件服务 ﹀-->
+<!--</span>-->
+
+<!--<div class="updata-2">-->
+<!--<img src="/static/order/confirm/img/im_11.png" />-->
+<!--<span>京准达运费大促（限自营中小件）</span>-->
+<!--</div>-->
+
+<!--</p>-->
+<!--<p class="kg">总重量 :<span>0.095kg</span></p>-->
+<!--</div>-->
+<!--<div class="to_right">-->
+<!--<h5>商家：谷粒学院自营</h5>-->
+<!--<button>换购</button><span>已购满20.00元，再加49.90元，可返回购物车领取赠品</span>-->
+<!--&lt;!&ndash;图片&ndash;&gt;-->
+<!--<img src="/static/order/confirm/img/im_03.png" />-->
+<!--<div class="mi">-->
+<!--<p>小米（MI）小米手环2 智能运动 心率检测 来 <span style="color: red;"> ￥ 149.00</span> <span> x1 </span> <span>有货</span></p>-->
+<!--<p>电提醒 久坐提醒 LED显示器 时间显示 防水记 <span>0.095kg</span></p>-->
+<!--<p class="tui-1"><img src="/static/order/confirm/img/i_07.png" />支持7天无理由退货</p>-->
+<!--</div>-->
+<!--<hr />-->
+<!--<p>退换无忧 <span class="money">￥ 0.00</span></p>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="bto">-->
+<!--<hr />-->
+<!--<h4 class="float">发票信息</h4>-->
+<!--<div class="note float"><img src="/static/order/confirm/img/i_11.png" /> 开企业抬头发票须填写纳税人识别号，以免影响报销</div>-->
+<!--<ul style="clear: both;">-->
+<!--<li>电子普通发票 <img src="/static/order/confirm/img/i_14.png" /></li>-->
+<!--<li>个人</li>-->
+<!--<li>商品明细</li>-->
+<!--<li>-->
+<!--<a href="/static/order/confirm/">修改</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--<hr class="clear hr1" />-->
+<!--<h4 class="clear">使用优惠/礼品卡/抵用 ^</h4>-->
+<!--<ul>-->
+<!--<li class="red">优惠卡</li>-->
+<!--<li>礼品卡</li>-->
+<!--<li>京豆</li>-->
+<!--<li>余额</li>-->
+<!--<li>领奖码</li>-->
+<!--</ul>-->
+<!--<div class="tuijian clear">-->
+<!--<input type="checkbox" />-->
+<!--<span>优惠组合推荐</span>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="xia">-->
+<!--<div class="qian">-->
+<!--<p class="qian_y">-->
+<!--<span>1</span>-->
+<!--<span>件商品，总商品金额：</span>-->
+<!--<span class="rmb">￥28.90</span>-->
+<!--</p>-->
+<!--<p class="qian_y">-->
+<!--<span>返现：</span>-->
+<!--<span class="rmb">  -￥0.00</span>-->
+<!--</p>-->
+<!--<p class="qian_y">-->
+<!--<span>运费： </span>-->
+<!--<span class="rmb"> &nbsp ￥0.00</span>-->
+<!--</p>-->
+<!--<p class="qian_y">-->
+<!--<span>服务费： </span>-->
+<!--<span class="rmb"> &nbsp ￥0.00</span>-->
+<!--</p>-->
+<!--<p class="qian_y">-->
+<!--<span>退换无忧： </span>-->
+<!--<span class="rmb"> &nbsp ￥0.00</span>-->
+<!--</p>-->
+
+<!--</div>-->
+
+<!--<div class="yfze">-->
+<!--<p class="yfze_a"><span>应付总额：</span><span class="hq">￥28.90</span></p>-->
+<!--<p class="yfze_b">寄送至： 北京 朝阳区 三环到四环之间 朝阳北路复兴国际大厦23层麦田房产 IT-中心研发二部 收货人：赵存权 188****5052</p>-->
+<!--</div>-->
+<!--<button class="tijiao">提交订单</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--主体部分-->
+<p class="p1">填写并核对订单信息 <span style="color: red" th:if="${msg!=null}" th:text="${msg}"></span> </p>
+<div class="section">
+	<!--收货人信息-->
+	<div class="top-2">
+		<span>收货人信息</span>
+		<span>新增收货地址</span>
+	</div>
+
+	<!--地址-->
+	<div class="top-3 addr-item" th:each="addr:${confirmOrder.memberAddressVos}">
+		<p th:attr="def=${addr.defaultStatus},addrId=${addr.id}">[[${addr.name}]]</p><span>[[${addr.name}]]  [[${addr.province}]]  [[${addr.city}]] [[${addr.region}]] [[${addr.detailAddress}]]  [[${addr.phone}]]</span>
+	</div>
+	<p class="p2">更多地址︾</p>
+	<div class="hh1"/>
+</div>
+<!--********************************************************************************************-->
+<!--谷粒学院自提-->
+<div class="top-4">
+	<p>谷粒学院自提</p>
+	<p>省运费·无续重·随时取</p>
+	<p class="xiang">详情</p>
+</div>
+
+<!--地址-->
+
+
+<!--支付方式-->
+<h4 class="h4">支付方式</h4>
+
+<div class="top-6">
+	<p>货到付款</p>
+	<p><span>惠</span>在线支付</p>
+</div>
+<div class="hh1"></div>
+<!--送货清单-->
+<h4 class="h4" style="margin-top: 5px;">送货清单</h4>
+<div class="top_1">
+	<div class="to_left">
+		<h5><span class="peisong">配送方式</span><span class="dui"><img
+				src="/static/order/confirm/img/i_03.png"/> 对应商品</span></h5>
+		<div class="box">
+			谷粒学院快递
+		</div>
+		<p class="biao">
+			<span class="til">标 准 达 ：</span>
+			<span class="con">预计 12月16日[今天] 15:00-19:00 送达</span>
+			<a href="/static/order/confirm/#">修改</a>
+		</p>
+		<div class="updata-1">
+			<img src="/static/order/confirm/img/im_06.png"/>
+			<span>京准达 标准达</span>
+			<span style="color: black;"> 配送服务全面升级</span>
+		</div>
+		<div class="hh1"></div>
+		<p class="tui">
+			<span class="til">退换无忧：</span>
+			<span class="con">
+							<input type="checkbox"/>
+							自签收后7天内退货，15天内换<span style="font-size: 12px;margin-left: 5px"> ￥ 0.50</span><br/>
+						<span class="nul">货，</span>可享1次上门取件服务 ﹀
+						</span>
+
+		<div class="updata-2">
+			<img src="/static/order/confirm/img/im_11.png"/>
+			<span>京准达运费大促（限自营中小件）</span>
+		</div>
+
+		</p>
+		<p class="kg" style="color:#666666;margin-top: 13px;font-size: 12px">总重量 :<span
+				style="color:#999999;font-size: 12px">0.095kg</span></p>
+	</div>
+	<div class="to_right">
+		<h5>商家：谷粒学院自营</h5>
+		<div>
+			<button>换购</button>
+			<span>已购满20.00元，再加49.90元，可返回购物车领取赠品</span></div>
+		<!--图片-->
+		<div class="yun1" th:each="item:${confirmOrder.items}">
+			<img th:src="${item.image}" class="yun"/>
+			<div class="mi">
+				<p>[[${item.title}]]<span style="color: red;" th:text="'￥' + ${#numbers.formatDecimal(item.price,3,2)}"> ￥ 499.00</span>
+					<span> [[${item.count}]] </span> <span> [[${confirmOrder.stocks[item.skuId]?"有货":"无货"}]]</span>
+				</p>
+				<p><span>[[${item.weight}]]kg</span></p>
+				<p class="tui-1"><img src="/static/order/confirm/img/i_07.png"/>支持7天无理由退货</p>
+			</div>
+		</div>
+
+		<div class="hh1"></div>
+		<p>退换无忧 <span class="money">￥ 0.00</span></p>
+	</div>
+</div>
+<div class="bto">
+	<div class="hh2"></div>
+	<h4 class="float">发票信息</h4>
+	<div class="note float"><img src="/static/order/confirm/img/i_11.png"/> <span>开企业抬头发票须填写纳税人识别号，以免影响报销</span></div>
+	<ul style="clear: both;">
+		<li>电子普通发票 <img src="/static/order/confirm/img/i_14.png"/></li>
+		<li>个人</li>
+		<li>商品明细</li>
+		<li>
+			<a href="/static/order/confirm/">修改</a>
+		</li>
+	</ul>
+	<div class="hh3"></div>
+	<h4 class="clear">使用优惠/礼品卡/抵用 ^</h4>
+	<ul>
+		<li class="red">优惠卡</li>
+		<li>礼品卡</li>
+		<li>京豆</li>
+		<li>余额</li>
+		<li>领奖码</li>
+	</ul>
+	<div class="tuijian clear">
+		<input type="checkbox"/>
+		<span>优惠组合推荐</span>
+	</div>
+</div>
+<div class="xia">
+	<div class="qian">
+		<p class="qian_y">
+			<span>[[${confirmOrder.count}]]</span>
+			<span>件商品，总商品金额：</span>
+			<span class="rmb">￥[[${#numbers.formatDecimal(confirmOrder.total, 1, 2)}]]</span>
+		</p>
+		<p class="qian_y">
+			<span>返现：</span>
+			<span class="rmb">  -￥0.00</span>
+		</p>
+		<p class="qian_y">
+			<span>运费： </span>
+			<span class="rmb"> &nbsp ￥<b id="fare"></b></span>
+		</p>
+		<p class="qian_y">
+			<span>服务费： </span>
+			<span class="rmb"> &nbsp ￥0.00</span>
+		</p>
+		<p class="qian_y">
+			<span>退换无忧： </span>
+			<span class="rmb"> &nbsp ￥0.00</span>
+		</p>
+
+	</div>
+
+	<div class="yfze">
+		<p class="yfze_a"><span class="z">应付总额：</span><span class="hq">￥<b id="payPrice">[[${#numbers.formatDecimal(confirmOrder.payPrice, 1, 2)}]]</b></span>
+		</p>
+		<p class="yfze_b">寄送至： <span id="receiveAddress"></span> 收货人：<span id="receiver"></span></p>
+	</div>
+	<form action="http://order.gulimall.com/submitOrder" method="post">
+		<input id="addrInput" type="hidden" name="addrId" />
+		<input id="payPriceInput" type="hidden" name="payPrice">
+		<input name="orderToken" th:value="${confirmOrder.orderToken}" type="hidden"/>
+		<button class="tijiao" type="submit">提交订单</button>
+	</form>
+</div>
+</div>
+
+<div class="headera">
+	<div class="Logo-tu">
+		<span><img src="/static/order/confirm/img/service_items_1.png"/></span>
+		<span><img src="/static/order/confirm/img/service_items_2.png"/></span>
+		<span><img src="/static/order/confirm/img/service_items_3.png"/></span>
+		<span><img src="/static/order/confirm/img/service_items_4.png"/></span>
+	</div>
+	<div class="table">
+		<dl>
+			<dt><a href="/static/order/confirm/##">购物指南</a></dt>
+			<dd>
+				<a href="/static/order/confirm/##">购物流程</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">会员介绍</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">生活旅行/团购</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">常见问题</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">大家电</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">练习客服</a>
+			</dd>
+		</dl>
+		<dl>
+			<dt><a href="/static/order/confirm/##">配送方式</a></dt>
+			<dd>
+				<a href="/static/order/confirm/##">上门自提</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">211限时达</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">配送服务查询</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##"></a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">海外配送</a>
+			</dd>
+			<dd></dd>
+		</dl>
+		<dl>
+			<dt><a href="/static/order/confirm/##">支付方式</a></dt>
+			<dd>
+				<a href="/static/order/confirm/##">货到付款</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">在线支付</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">分期付款</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">邮局汇款</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">公司转账</a>
+			</dd>
+			<dd></dd>
+		</dl>
+		<dl>
+			<dt><a href="/static/order/confirm/##">售后服务</a></dt>
+			<dd>
+				<a href="/static/order/confirm/##">售后政策</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">价格保护</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">退款说明</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">返修/退换货</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">取消订单</a>
+			</dd>
+			<dd></dd>
+		</dl>
+		<dl class="dls">
+			<dt><a href="/static/order/confirm/##">特色服务</a></dt>
+			<dd>
+				<a href="/static/order/confirm/##">夺宝岛</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">DIY装机</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">延保服务</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">谷粒学院E卡</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">谷粒学院通信</a>
+			</dd>
+			<dd>
+				<a href="/static/order/confirm/##">谷粒学院gulimall+</a>
+			</dd>
+		</dl>
+	</div>
+	<div class="guanyuwomen">
+		<ul>
+			<li>
+				<a href="/static/order/confirm/##">关于我们</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">联系我们</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">联系客服</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">合作招商</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">商家帮助</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">营销中心</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">手机谷粒学院</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">友情链接</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">销售联盟</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">谷粒学院社区</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">风险检测</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">隐私政策</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">谷粒学院公益</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">English Site</a>
+			</li>
+			<li>|</li>
+			<li>
+				<a href="/static/order/confirm/##">Mdeila $ IR</a>
+			</li>
+		</ul>
+	</div>
+	<p class="p1">
+		<a href="/static/order/confirm/##"> 京公网安备 11000002000088号</a>|
+		<a href="/static/order/confirm/##"> 京ICP证070359号</a>|
+		<a href="/static/order/confirm/##"> 互联网药品信息服务资格证编号(京)-经营性-2014-0008 </a>|
+		<a href="/static/order/confirm/##">新出发京零 字第大120007号</a>
+	</p>
+	<p class="p1">
+		<a href="/static/order/confirm/##"> 互联网出版许可证编号新出网证(京)字150号</a>|
+		<a href="/static/order/confirm/##"> 出版物经营许可证</a>|
+		<a href="/static/order/confirm/##"> 网络文化经营许可证京网文 </a>|
+		<a href="/static/order/confirm/##">[2014]2148-348号 </a>|
+		<a href="/static/order/confirm/##"> 违法和不良信息举报电话 </a>|
+		<a href="/static/order/confirm/##">：4006561155 </a>
+	</p>
+	<p class="p1">
+		<a href="/static/order/confirm/##"> Copyright © 2004-2017 谷粒学院gulimall.com 版权所有</a>|
+		<a href="/static/order/confirm/##"> 消费者维权热线：4006067733 经营证照</a>|
+	</p>
+	<p class="p1">
+		<a href="/static/order/confirm/##"> 谷粒学院旗下网站：谷粒学院支付</a>|
+		<a href="/static/order/confirm/##"> 谷粒学院云</a>
+	</p>
+	<p class="p3">
+		<img src="/static/order/confirm/img/54b8871eNa9a7067e.png"/>
+		<img src="/static/order/confirm/img/54b8872dNe37a9860.png"/>
+		<img src="/static/order/confirm/img/54b8875fNad1e0c4c.png"/>
+		<img src="/static/order/confirm/img/5698dc03N23f2e3b8.jpg"/>
+		<img src="/static/order/confirm/img/5698dc16Nb2ab99df.jpg"/>
+		<img src="/static/order/confirm/img/56a89b8fNfbaade9a.jpg"/>
+	</p>
+</div>
+<script>
+	$(document).ready(function () {
+		$('.header-right li:nth-of-type(6)').hover(function () {
+			$('.header-r-11').css('display', 'block')
+		}, function () {
+			$('.header-r-11').css('display', 'none')
+		})
+		$('.header-right li:nth-of-type(12)').hover(function () {
+			$('.header-r-2').css('display', 'block')
+		}, function () {
+			$('.header-r-2').css('display', 'none')
+		})
+		$('.header-right li:nth-of-type(14)').hover(function () {
+			$('.header-r-3').css('display', 'block')
+		}, function () {
+			$('.header-r-3').css('display', 'none')
+		})
+		$('.header-l-2').hover(function () {
+			$('.header-l-d').css('display', 'block')
+		}, function () {
+			$('.header-l-d').css('display', 'none')
+		})
+		$('.header-r-4').hover(function () {
+			$('.h-r-1').css('display', 'block')
+		}, function () {
+			$('.h-r-1').css('display', 'none')
+		});
+
+		highlightAddress();
+		var addrId = $(".addr-item p[def='1']").attr("addrId");
+		getFare(addrId)
+	});
+
+
+	function highlightAddress() {
+		$(".addr-item p").css({"border": "2px solid gray"});
+		$(".addr-item p[def='1']").css({"border": "2px solid red"});
+	}
+
+	$(".addr-item p").click(function () {
+		$(".addr-item p").attr("def", "0");
+		$(this).attr("def", "1");
+		highlightAddress();
+
+		//获取到当前地址id
+		var addrId = $(this).attr("addrId");
+
+		//发送ajax请求获取运费信息
+		getFare(addrId);
+	});
+
+	//查运费
+	function getFare(addrId) {
+		//给表单回填选择的地址
+		$("#addrInput").val(addrId);
+		$.get("http://gulimall.com/api/ware/wareinfo/fare/" + addrId, function (resp) {
+			console.log(resp);
+			$("#fare").text(resp.fare);
+			var total = [[${confirmOrder.total}]];
+
+			var payPrice = total * 1 + resp.fare * 1;
+			//设置运费
+			$("#payPrice").text(payPrice);
+			$("#payPriceInput").val(payPrice);
+
+			//设置收获地址人信息
+			$("#receiveAddress").text(resp.address.province + " " + resp.address.city + " " + " " + resp.address.region + resp.address.detailAddress);
+			$("#receiver").text(resp.address.name);
+		})
+	}
+</script>
+</body>
+
+</html>

@@ -2,14 +2,26 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://#:3306/gulimall_ums
+    url: jdbc:mysql://47.110.152.217:3306/gulimall_ums
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: gulimall-member
   cloud:
     nacos:
       discovery:
-        server-addr: #
+        server-addr: 47.110.152.217
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+  zipkin:
+    base-url: http://localhost:9411
+    sender:
+      type: web
+    discovery-client-enabled: false
+  #采样取值介于 0到1之间，1则表示全部收集
+  sleuth:
+    sampler:
+      probability: 1
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
   global-config:
@@ -20,3 +32,9 @@ server:
 logging:
   level:
     io.niceseason.gulimall.member.dao: debug
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
