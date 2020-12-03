@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.zt {
+  width: 877px;
+  height: 370px;
+  background: #FFFFFF;
+  position: fixed;
+  top: 75px;
+  left: 265px;
+  overflow: auto;
+  margin-top: 15px; }
+
+.tou {
+  position: fixed;
+  top: 48px;
+  left: 254px;
+  width: 892px;
+  height: 30px;
+  background: #F3F3F3;
+  line-height: 30px; }
+  .tou p {
+    float: left;
+    font-size: 17px;
+    margin-left: 10px; }
+  .tou span {
+    margin-left: 628px; }
+
+.zong {
+  width: 900px;
+  height: 520px;
+  background: #FFFFFF;
+  position: fixed;
+  top: 45px;
+  left: 250px;
+  z-index: 999;
+  border: 4px solid #CCCCCC;
+  padding: 0 5px;
+  border-radius: 5px; }
+
+.dibu {
+  position: absolute;
+  top: 420px;
+  left: 2px;
+  background: #FFFFFF;
+  width: 890px;
+  height: 80px;
+  text-align: center; }
+  .dibu .quxiao {
+    background: #E3E4E5;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 30px;
+    color: cadetblue;
+    font-size: 18px; }
+  .dibu button {
+    margin-top: 18px;
+    outline: none;
+    border: none; }
+  .dibu .ty {
+    background: #EE2222;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 30px;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-left: 20px; }
+
+/*# sourceMappingURL=index.css.map */

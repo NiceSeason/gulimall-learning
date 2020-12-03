@@ -1,0 +1,286 @@
+/*国际惯例*/
+		
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		body,
+		html {
+			width: 1366px;
+			background-color: white;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			font-family: 微软雅黑;
+			align-items: center;
+		}
+		
+		body a,
+		html a {
+			text-decoration: none;
+		}
+		
+		body ul,
+		body li,
+		html ul,
+		html li {
+			list-style: none;
+		}
+		/*常用标签的样式重置*/
+		
+		i {
+			font-style: normal;
+		}
+		
+		a {
+			text-decoration: none;
+		}
+		
+		input {
+			outline: none;
+			border: none;
+		}
+		/*设定html和body的宽度为100%*/
+		.laoda{
+			width: 1366px;
+			height: 660px;
+			background: #D9D9D9;
+			position: fixed;
+			z-index: 999;
+			cursor: pointer;
+		}
+		html,
+		body {
+			width: 100%;
+			font: 14px/150% tahoma, arial, Microsoft YaHei, Hiragino Sans GB, "\u5b8b\u4f53", sans-serif;
+			-webkit-font-smoothing: antialiased;
+			color: #666;
+		}
+		/*头部*/
+		
+		.logo {
+			width: 140px;
+			height: 40px;
+			background: url(../img/icon.png) no-repeat;
+			position: absolute;
+			top: 20px;
+			left: 35px;
+		}
+		
+		.desc {
+			font-size: 22px;
+			line-height: 15px;
+			position: absolute;
+			left: 210px;
+			top: 40px;
+			padding-left: 20px;
+			font-weight: bold;
+		}
+		
+		.dfg {
+			font-size: 16px;
+			margin-left: 1140px;
+			float: left;
+			margin-top: 60px;
+		}
+		
+		.dfg a {
+			color: black;
+		}
+		
+		.dfg a:hover {
+			border-bottom: 1px solid black;
+		}
+		
+		header {
+			width: 100%;
+			height: 110px;
+			box-shadow: 10px 10px 10px rgba(111, 111, 111, .1);
+			background-color: white;
+		}
+		/*注册信息*/
+		/*总体布局*/
+		
+		section {
+			width: 1100px;
+			height: 700px;
+			border-bottom: 1px solid #E7E7E7;
+			display: flex;
+			justify-content: space-around;
+		}
+		
+		form {
+			width: 500px;
+			height: 550px;
+			margin: auto;
+			margin-top: 80px;
+			float: left;
+			margin-left: 100px;
+			border-right: 1px solid #E7E7E7;
+			padding: 0px 100px 0px 0px;
+		}
+		.two .right_r{
+			margin-right: 150px;
+			margin-top: 80px;
+		}
+		.two .right_r1{
+			width: 150px;
+			height: 60px;
+			border-bottom: 1px solid #E7E7E7;
+		}
+		.two .right_r1>span{
+			color: #999999;
+			margin-left: 15px;
+		}
+		.two .right_r1>span:hover{
+			border-bottom: 1px solid black;
+			color: black;
+		}
+		.two .right_r2{
+			width: 150px;
+			height: 50px;
+			margin-top: 20px;
+			display: flex;
+			align-items: center;
+		}
+		.two .right_r2>span{
+			color: #999999;
+			margin-left: 15px;
+		}
+		.two .right_r2>span:hover{
+			color: black;
+			
+		}
+		
+		.one .register-box {
+			border: 1px solid #ddd;
+			margin-bottom: 32px;
+		}
+		
+		.one .register-box label {
+			height: 52px;
+			line-height: 52px;
+			padding-left: 20px;
+			display: inline-block;
+		}
+		
+		.one .register-box input {
+			width: 190px;
+			height: 19px;
+			padding-bottom: 11px;
+			padding-left: 18px;
+			padding-top: 16px;
+			font-size: 14px;
+			font-family: "Microsoft YaHei", "Hiragino Sans GB";
+			/*color: red !important;*/
+		}
+		.one .register-box input:-ms-input-placeholder{
+			color: #CCCCCC;
+		}
+		.one .register-box .tips {
+			position: absolute;
+			margin-top: 5px;
+			font-size: 14px;
+			color: #ccc;
+		}
+		/*用户名*/
+		
+		.one .register-box .username_label {
+			word-spacing: 10px;
+		}
+		/*密码，确认密码，*/
+		
+		.one .register-box .other_label {
+			word-spacing: 2px;
+		}
+		/*手机号*/
+		
+		.one .register-box span {
+			display: inline-block;
+			width: 77px;
+			height: 52px;
+			border-right: 1px solid #ddd;
+		}
+		
+		.one .register-box .phone {
+			padding-left: 18px;
+		}
+		/*验证码*/
+		
+		#code {
+			display: inline-block;
+			width: 100px;
+			height: 55px;
+			vertical-align: middle;
+			background-color: black;
+			font-size: 25px;
+			color: #fff;
+			text-align: center;
+			line-height: 46px;
+			margin-left: 23px;
+		}
+		/*协议*/
+		
+		.arguement {
+			margin-bottom: 58px;
+		}
+		
+		.arguement input {
+			vertical-align: middle;
+		}
+		
+		.arguement a {
+			color: #38f;
+			text-decoration: none;
+			font-size: 12px;
+		}
+		/*提交按钮*/
+		
+		.submit_btn button {
+			width: 100%;
+			height: 54px;
+			color: #fff;
+			background: #e22;
+			border: 0;
+			font-size: 16px;
+			font-family: "Microsoft YaHei", "Hiragino Sans GB";
+		}
+		
+		.footer ul {
+			height: 31px;
+			display: flex;
+			align-items: center;
+		}
+		
+		.footer ul li {
+			color: #999;
+			margin-left: 14px;
+		}
+		
+		.footer ul li a {
+			color: #999;
+			font-size: 12px;
+		}
+		
+		.footer ul li a:hover {
+			border-bottom: 1px solid #999999;
+		}
+		
+		.bq {
+			text-align: center;
+			font-size: 12px;
+			color: #999;
+		}
+		.one .register-box{
+			width: 400px;
+			
+		}
+		.one .register-box span{
+			width: 85px;
+			height: 52px;
+		}
+		.caa{
+			width: 160px !important;
+			margin-left: 20px;
+		}

@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+html {
+  width: 990px; }
+
+.oBox {
+  width: 990px; }
+  .oBox .shuoHou {
+    width: 990px;
+    height: 39.33px;
+    font-size: 12px;
+    background: #F7F7F7; }
+    .oBox .shuoHou .baoZhang {
+      width: 968px;
+      height: 18px;
+      margin: 0 auto;
+      position: relative;
+      top: 9px; }
+      .oBox .shuoHou .baoZhang h2 {
+        width: 100px;
+        height: 18px;
+        color: #808080; }
+  .oBox .changJia {
+    width: 990px;
+    height: 895.33px;
+    margin: 0 auto; }
+    .oBox .changJia .oCz {
+      width: 888px;
+      height: 140px; }
+    .oBox .changJia .lianBao {
+      width: 970px;
+      height: 170px;
+      margin: 0 auto;
+      position: relative;
+      top: 50px;
+      color: #666666; }
+      .oBox .changJia .lianBao .oImg {
+        width: 888px;
+        height: 50px;
+        margin: 0 auto;
+        margin-top: 20px; }
+        .oBox .changJia .lianBao .oImg img {
+          width: 35px;
+          height: 32px;
+          display: inline;
+          margin-left: 10px;
+          vertical-align: middle; }
+        .oBox .changJia .lianBao .oImg h3 {
+          width: 64px;
+          height: 43px;
+          color: red;
+          display: inline; }
+      .oBox .changJia .lianBao .hangHuo {
+        width: 888px;
+        height: 50px; }
+      .oBox .changJia .lianBao .wenZi {
+        width: 888px;
+        height: 148px;
+        margin: 0 auto;
+        font-size: 13px; }
+    .oBox .changJia .quanLi {
+      width: 970px;
+      height: 80px;
+      font-size: 12px;
+      margin: 0 auto; }
+      .oBox .changJia .quanLi h4 {
+        width: 970px;
+        height: 20px;
+        color: red; }
+      .oBox .changJia .quanLi .jingDong {
+        color: #666666; }
+        .oBox .changJia .quanLi .jingDong .oZhu {
+          color: #666666;
+          font-weight: bold; }
+    .oBox .changJia .jiaGe {
+      width: 970px;
+      height: 130px; }
+  .oBox .pingJia {
+    width: 990px;
+    height: 39.33px;
+    font-size: 12px;
+    background: #F7F7F7; }
+    .oBox .pingJia .oSp {
+      width: 968px;
+      height: 18px;
+      margin: 0 auto;
+      position: relative;
+      top: 9px; }
+      .oBox .pingJia .oSp h2 {
+        width: 100px;
+        height: 18px;
+        color: #808080; }
+  .oBox .oGood {
+    width: 990px;
+    height: 139.67px;
+    text-align: center;
+    margin: 0 auto; }
+    .oBox .oGood .pingDu {
+      width: 130px;
+      height: 89.67px;
+      display: inline;
+      position: relative;
+      top: 10px; }
+      .oBox .oGood .pingDu .oWell {
+        width: 36px;
+        height: 14.67px;
+        font-size: 5px; }
+      .oBox .oGood .pingDu h3 {
+        width: 90px;
+        height: 56.67px;
+        font-size: 20px;
+        color: red;
+        display: inline; }
+    .oBox .oGood .oMonth {
+      width: 900px;
+      height: 62.67px;
+      float: right;
+      position: relative; }
+      .oBox .oGood .oMonth li {
+        width: 83.07px;
+        height: 21.33px;
+        color: #808080;
+        float: left;
+        font-size: 12px;
+        position: relative;
+        margin-left: 15px;
+        margin-top: 8px; }
+        .oBox .oGood .oMonth li p {
+          width: 83.07px;
+          height: 21.33px;
+          line-height: 21.33px;
+          color: darkgray;
+          border: 1px solid darkgray; }
+      .oBox .oGood .oMonth li:hover {
+        border: black;
+        color: gray; }
+  .oBox .oQbpj {
+    width: 978.67px;
+    height: 30px;
+    background: #FAFAFA;
+    border: 1px solid darkgoldenrod; }
+    .oBox .oQbpj .oDhpj {
+      width: 680px;
+      height: 30px;
+      display: inline;
+      background: #FAFAFA; }
+      .oBox .oQbpj .oDhpj .pingJia {
+        width: 113.89px;
+        height: 28px; }
+      .oBox .oQbpj .oDhpj .saiTu {
+        width: 73.14px;
+        height: 28px; }
+      .oBox .oQbpj .oDhpj .zhuiPing {
+        width: 82.03px;
+        height: 28px; }
+      .oBox .oQbpj .oDhpj .haoPing {
+        width: 89.89px;
+        height: 28px; }
+      .oBox .oQbpj .oDhpj .zhongPing {
+        width: 82.03px;
+        height: 28px; }
+      .oBox .oQbpj .oDhpj .dangQian {
+        widows: 135.67px;
+        height: 30px; }
+      .oBox .oQbpj .oDhpj li {
+        width: 85px;
+        height: 28px;
+        float: left;
+        line-height: 28px;
+        text-align: center;
+        font-size: 11px; }
+      .oBox .oQbpj .oDhpj li:hover {
+        color: red; }
+    .oBox .oQbpj .xiaLa {
+      width: 84px;
+      height: 28px;
+      text-align: center;
+      line-height: 28px;
+      font-size: 13px;
+      float: right;
+      position: relative;
+      right: 20px;
+      color: #808080; }
+    .oBox .oQbpj .xiaLa:hover {
+      color: red; }
+  .oBox .yongHu {
+    width: 990px;
+    height: 3369.67px;
+    border: 1px solid greenyellow; }
+    .oBox .yongHu .bOx {
+      width: 970px;
+      height: 585.33px;
+      border: 1px solid darkred;
+      margin: 0 auto;
+      position: relative;
+      top: 10px; }
+      .oBox .yongHu .bOx .hEader {
+        width: 140px;
+        height: 46.33px;
+        border: 1px solid blue; }
+        .oBox .yongHu .bOx .hEader .oTuxiang {
+          width: 140px;
+          height: 25.33px;
+          font-size: 14px; }
+          .oBox .yongHu .bOx .hEader .oTuxiang img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            vertical-align: middle; }
+        .oBox .yongHu .bOx .hEader .huiYuan {
+          width: 140px;
+          height: 21px;
+          line-height: 21px;
+          font-size: 12px;
+          color: #E4A30A; }
+      .oBox .yongHu .bOx .neiRong {
+        width: 810px;
+        height: 554.67px;
+        border: 1px solid aquamarine; }
+        .oBox .yongHu .bOx .neiRong .oStart {
+          width: 810px;
+          height: 20px; }
+          .oBox .yongHu .bOx .neiRong .oStart img {
+            width: 78px;
+            height: 14px; }
+
+/*# sourceMappingURL=new_file.css.map */
