@@ -29,6 +29,7 @@ import io.niceseason.gulimall.product.dao.CategoryDao;
 import io.niceseason.gulimall.product.entity.CategoryEntity;
 import io.niceseason.gulimall.product.service.CategoryService;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
 
@@ -60,17 +61,30 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
     @Override
     public List<CategoryEntity> listWithTree() {
         List<CategoryEntity> entities = baseMapper.selectList(null);
-        List<CategoryEntity> collect = entities.stream()
-                .filter(item->item.getParentCid()==0)
-                .map(menu->{
-                    menu.setChildren(getChildrens(menu,entities));
-                    return menu;
-                })
-                .sorted((menu1,menu2)->{
-                    return (menu1.getSort()==null?0:menu1.getSort()) - (menu2.getSort()==null?0:menu2.getSort());
-                })
-                .collect(Collectors.toList());
-        return collect;
+        if (CollectionUtils.isEmpty(entities)) {
+            return entities;
+        }
+        //此处按父id分组，是为了在下面拼装子树的时候无需每次都filter出父id为什么什么的子树，直接o（1）的时间复杂度获取到
+        Map<Long, List<CategoryEntity>> categoryEntitiesMap =
+                entities.stream().collect(Collectors.groupingBy(CategoryEntity::getParentCid));
+        return dfs(categoryEntitiesMap, 0);
+    }
+
+    //dfs算法拼装树形结构
+    private List<CategoryEntity> dfs(Map<Long, List<CategoryEntity>> categoryEntitiesMap, long parentCid) {
+        List<CategoryEntity> categoryEntities = categoryEntitiesMap.get(parentCid);
+        if (CollectionUtils.isEmpty(categoryEntities)) {
+            return categoryEntities;
+        }
+        //排序并拼装子树
+        return categoryEntities.stream().sorted(((o1, o2) -> {
+                    if (o1.getSort() == null || o2.getSort() == null) {
+                        return 0;
+                    }
+                    return o1.getSort().compareTo(o2.getSort());
+                })).
+                peek(CategoryEntity -> CategoryEntity.setChildren(dfs(categoryEntitiesMap,
+                        CategoryEntity.getCatId()))).collect(Collectors.toList());
     }
 
     @Override
@@ -267,19 +281,19 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
         }
     }
 
-    private List<CategoryEntity> getChildrens(CategoryEntity categoryEntity, List<CategoryEntity> entities) {
-        List<CategoryEntity> collect = entities.stream()
-                .filter(item -> item.getParentCid() == categoryEntity.getCatId())
-                .map(menu -> {
-                    menu.setChildren(getChildrens(menu, entities));
-                    return menu;
-                })
-                .sorted((menu1, menu2) -> {
-                    return (menu1.getSort()==null?0:menu1.getSort()) - (menu2.getSort()==null?0:menu2.getSort());
-                })
-                .collect(Collectors.toList());
-        return collect;
-    }
+//    private List<CategoryEntity> getChildrens(CategoryEntity categoryEntity, List<CategoryEntity> entities) {
+//        List<CategoryEntity> collect = entities.stream()
+//                .filter(item -> item.getParentCid() == categoryEntity.getCatId())
+//                .map(menu -> {
+//                    menu.setChildren(getChildrens(menu, entities));
+//                    return menu;
+//                })
+//                .sorted((menu1, menu2) -> {
+//                    return (menu1.getSort()==null?0:menu1.getSort()) - (menu2.getSort()==null?0:menu2.getSort());
+//                })
+//                .collect(Collectors.toList());
+//        return collect;
+//    }
 
 //    public List<CategoryEntity> listWithTree(){
 //        List<CategoryEntity> entities = baseMapper.selectList(null);
