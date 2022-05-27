@@ -77,7 +77,12 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
             return categoryEntities;
         }
         //排序并拼装子树
-        return categoryEntities.stream().sorted(Comparator.comparing(CategoryEntity::getSort)).
+        return categoryEntities.stream().sorted(((o1, o2) -> {
+                    if (o1.getSort() == null || o2.getSort() == null) {
+                        return 0;
+                    }
+                    return o1.getSort().compareTo(o2.getSort());
+                })).
                 peek(CategoryEntity -> CategoryEntity.setChildren(dfs(categoryEntitiesMap,
                         CategoryEntity.getCatId()))).collect(Collectors.toList());
     }
