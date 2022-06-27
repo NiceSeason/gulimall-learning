@@ -29,7 +29,7 @@
 		<mysql.version>8.0.17</mysql.version>
 		<mssql.version>4.0</mssql.version>
 		<oracle.version>11.2.0.3</oracle.version>
-		<mongo.version>3.11.0</mongo.version>
+		<mongo.version>3.11.3</mongo.version>
 	</properties>
 
 	<dependencies>
