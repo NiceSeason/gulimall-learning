@@ -15,10 +15,10 @@ package io.renren.datasource.properties;
  * @since 1.0.0
  */
 public class DataSourceProperties {
-    private String driverClassName;
-    private String url;
-    private String username;
-    private String password;
+    private String driverClassName = "com.mysql.cj.jdbc.Driver";
+    private String url="jdbc:mysql://192.168.56.10:3306/gulimall_admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false" ;
+    private String username = "root";
+    private String password = "root";
 
     /**
      * Druid默认参数

@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: gulimall-third-party
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.56.10:8848
+        namespace: 1febd507-a997-485c-ab57-181497881ae3
+      config:
+        name: gulimall-third-party
+        server-addr: 192.168.56.10:8848
+        namespace: 1febd507-a997-485c-ab57-181497881ae3
+        file-extension: yml
+        group: dev
+        ext-config:
+          - data-id: oos.yml
+            group: dev
+            refresh: true
+#    sentinel:
+#      transport:
+#        dashboard: localhost:8080
+
+logging:
+  level:
+    org.springframework.boot.context.config: debug

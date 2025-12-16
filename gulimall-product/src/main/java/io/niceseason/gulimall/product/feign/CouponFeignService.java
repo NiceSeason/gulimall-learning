@@ -7,6 +7,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @FeignClient("gulimall-coupon")
 public interface CouponFeignService {
@@ -16,4 +17,7 @@ public interface CouponFeignService {
 
     @PostMapping("/coupon/skufullreduction/saveInfo")
     R saveSkuReductionTo(@RequestBody SkuReductionTo skuReductionTo);
+
+    @RequestMapping("/coupon/coupon/member/list")
+    R memberCoupons();
 }

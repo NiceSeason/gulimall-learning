@@ -41,6 +41,12 @@ public class IndexController {
         return "index";
     }
 
+    @GetMapping("test")
+    @ResponseBody
+    public String test() {
+        return  "hello world";
+    }
+
     @GetMapping("index/json/catalog.json")
     @ResponseBody
     public Map<String, List<Catalog2Vo>> getCategoryMap() {

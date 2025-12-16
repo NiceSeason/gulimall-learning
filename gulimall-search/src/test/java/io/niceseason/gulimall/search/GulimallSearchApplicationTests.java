@@ -41,6 +41,11 @@ public  class GulimallSearchApplicationTests {
     private RestHighLevelClient restHighLevelClient;
 
     @Test
+    public void myTest(){
+        System.out.println("this is a test");
+    }
+
+    @Test
     public void contextLoads() throws IOException {
         IndexRequest request = new IndexRequest("user");
         request.id("1");

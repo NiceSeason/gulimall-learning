@@ -37,10 +37,12 @@ public class CouponController {
     private String name;
     @Value("${coupon.user.age}")
     private Integer age;
+    @Value("${coupon.user.love}")
+    private String love;
 
     @RequestMapping("/test")
     public R getConfigInfo(){
-        return R.ok().put("name",name).put("age",age);
+        return R.ok().put("name",name).put("age",age).put("love",love)  ;
     }
 
     /**

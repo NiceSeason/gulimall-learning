@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.56.10:8848 # nacos注册中心地址
+        namespace: 1febd507-a997-485c-ab57-181497881ae3
+      config:
+        name: renren-fast
+        file-extension: yml
+        server-addr: 192.168.56.10:8848 # nacos配置中心地址
+        namespace: 1febd507-a997-485c-ab57-181497881ae3
+        group: dev
+        ext-config:
+          - data-id: mybatis.yml
+            group: dev
+            refresh: true
+          - data-id: other.yml
+            group: dev
+            refresh: true
+#    sentinel:
+#      transport:
+#        dashboard: localhost:8080

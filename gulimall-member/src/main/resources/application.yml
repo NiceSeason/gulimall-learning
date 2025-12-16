@@ -1,15 +1,7 @@
 spring:
-  datasource:
-    username: root
-    password: root
-    url: jdbc:mysql://#:3306/gulimall_ums
-    driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: gulimall-member
   cloud:
-    nacos:
-      discovery:
-        server-addr: #nacos注册中心地址
     sentinel:
       transport:
         dashboard: localhost:8080
@@ -22,11 +14,11 @@ spring:
   sleuth:
     sampler:
       probability: 1
-mybatis-plus:
-  mapper-locations: classpath:/mapper/**/*.xml
-  global-config:
-    db-config:
-      id-type: auto
+#mybatis-plus:
+#  mapper-locations: classpath:/mapper/**/*.xml
+#  global-config:
+#    db-config:
+#      id-type: auto
 server:
   port: 8000
 logging:

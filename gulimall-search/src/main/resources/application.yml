@@ -5,23 +5,23 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: #nacos注册中心地址
-    sentinel:
-      transport:
-        dashboard: localhost:8080
+        server-addr: 192.168.56.10:8848
+#    sentinel:
+#      transport:
+#        dashboard: localhost:8080
   redis:
-    host: 192.168.56.102
+    host: 192.168.56.10
   session:
     store-type: redis
-  zipkin:
-    base-url: http://localhost:9411
-    sender:
-      type: web
-    discovery-client-enabled: false
-  #采样取值介于 0到1之间，1则表示全部收集
-  sleuth:
-    sampler:
-      probability: 1
+#  zipkin:
+#    base-url: http://192.168.56.10:9411
+#    sender:
+#      type: web
+#    discovery-client-enabled: false
+#  #采样取值介于 0到1之间，1则表示全部收集
+#  sleuth:
+#    sampler:
+#      probability: 1
 logging:
   level:
     io.niceseason.gulimall.search.service: debug

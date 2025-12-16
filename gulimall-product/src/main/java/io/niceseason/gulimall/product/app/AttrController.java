@@ -1,13 +1,18 @@
 package io.niceseason.gulimall.product.app;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import io.niceseason.common.utils.HttpUtils;
 import io.niceseason.gulimall.product.entity.ProductAttrValueEntity;
 import io.niceseason.gulimall.product.vo.AttrRespVo;
 import io.niceseason.gulimall.product.vo.AttrVo;
+import org.apache.http.HttpResponse;
+import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -39,9 +44,16 @@ public class AttrController {
 //
 //        return R.ok().put("page", page);
 //    }
-    @GetMapping("/hello")
-    public String helloTest() {
-        return "hello";
+    @GetMapping("/helloSaga")
+    public String helloTest() throws Exception {
+        HttpResponse response = HttpUtils.doGet("http://localhost:7000/", "dispatch/test", "get", new HashMap<>(), null);
+
+        String resEntity = EntityUtils.toString(response.getEntity(), StandardCharsets.UTF_8);
+
+
+        return resEntity;
+
+
     }
 
     @GetMapping("/base/listforspu/{spuId}")

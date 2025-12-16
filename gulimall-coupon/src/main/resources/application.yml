@@ -1,18 +1,9 @@
+server:
+  port: 7000
 spring:
-  datasource:
-    username: root
-    password: root
-    url: jdbc:mysql://#:3306/gulimall_sms
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    hikari:
-      max-lifetime: 500000
-      maximum-pool-size: 20
   application:
     name: gulimall-coupon
   cloud:
-    nacos:
-      discovery:
-        server-addr: #nacos注册中心地址
     sentinel:
       transport:
         dashboard: localhost:8080
@@ -24,23 +15,22 @@ spring:
   #采样取值介于 0到1之间，1则表示全部收集
   sleuth:
     sampler:
-      probability: 1
+      probability: 0
 
-#  # jackson时间格式化
+  #  # jackson时间格式化
   jackson:
     time-zone: GMT+8
 #    date-format: yyyy-MM-dd HH:mm:ss
 #  mvc:
 #    date-format: yyyy-MM-dd'T'HH:mm:ss.SSS Z
 
-mybatis-plus:
-  mapper-locations: classpath:/mapper/**/*.xml
-  global-config:
-    db-config:
-      id-type: auto
+#mybatis-plus:
+#  mapper-locations: classpath:/mapper/**/*.xml
+#  global-config:
+#    db-config:
+#      id-type: auto
 
-server:
-  port: 7000
+
 
 logging:
   level:

@@ -9,14 +9,11 @@ spring:
     sampler:
       probability: 1
   cloud:
-    nacos:
-      discovery:
-        server-addr: #nacos注册中心地址:8848
     alicloud:
       access-key: #
       secret-key:  #
       oss:
-        bucket: gulimall-niceseason
+        bucket: gulimall-luli
         endpoint: oss-cn-hangzhou.aliyuncs.com
       # 发送短信接口的配置
       sms:
@@ -27,8 +24,6 @@ spring:
       transport:
         dashboard: localhost:8080
 
-  application:
-    name: gulimall-third-party
 
 server:
   port: 30000

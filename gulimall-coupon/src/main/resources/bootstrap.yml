@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.56.10:8848
+        namespace: 1febd507-a997-485c-ab57-181497881ae3
+        file-extension: yml
+#        group: dev
+        ext-config:
+          - data-id: coupon.yml
+            group: dev
+            refresh: true
+          - data-id: mybatis.yml
+            group: dev
+            refresh: true
+      discovery:
+        server-addr: 192.168.56.10:8848
+        namespace: 1febd507-a997-485c-ab57-181497881ae3
