@@ -36,8 +36,8 @@ public class OrderController {
     @RequestMapping("/list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = orderService.queryPage(params);
-
-        return R.ok().put("page", page);
+       log.info("Hello world!");
+       return R.ok().put("page", page);
     }
 
 
